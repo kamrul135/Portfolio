@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Kamrul Hasan - Student Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-slate-300">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-slate-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-slate-700/80 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-100 hover:text-indigo-400 transition-colors">Md Kamrul Hasan</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-slate-300 hover:text-indigo-400 font-medium transition-colors">About</a>
+                <a href="#skills" class="text-slate-300 hover:text-indigo-400 font-medium transition-colors">Skills</a>
+                <a href="#portfolio" class="text-slate-300 hover:text-indigo-400 font-medium transition-colors">Portfolio</a>
+                <a href="#contact" class="text-slate-300 hover:text-indigo-400 font-medium transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:block bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40">
+                Contact Me
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-slate-300">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+             <a href="#about" class="block py-2 text-slate-300 hover:text-indigo-400 font-medium">About</a>
+             <a href="#skills" class="block py-2 text-slate-300 hover:text-indigo-400 font-medium">Skills</a>
+             <a href="#portfolio" class="block py-2 text-slate-300 hover:text-indigo-400 font-medium">Portfolio</a>
+             <a href="#contact" class="block py-2 text-slate-300 hover:text-indigo-400 font-medium">Contact</a>
+             <a href="#contact" class="block mt-4 bg-indigo-600 text-white text-center px-5 py-2.5 rounded-lg hover:bg-indigo-500 transition-colors font-semibold">Contact Me</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative hero-gradient text-white pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="mb-8" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="profile.jpg" alt="Md Kamrul Hasan" class="w-32 h-32 rounded-full mx-auto border-4 border-white/20 shadow-2xl object-cover">
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 name-gradient" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.1);" data-aos="fade-up">Md Kamrul Hasan</h1>
+                <p class="text-xl md:text-2xl font-medium mb-8 text-indigo-300" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.2);" data-aos="fade-up" data-aos-delay="200">Computer Science Engineer</p>
+                <p class="max-w-3xl mx-auto text-lg text-slate-200 mb-12" data-aos="fade-up" data-aos-delay="300">
+                    A passionate Computer Science and Technology student at Nanjing University of Posts and Telecommunication, with a strong interest in software development and problem-solving.
+                </p>
+                <a href="#portfolio" class="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-bold hover:bg-indigo-100 transition-all duration-300 transform hover:scale-105 shadow-2xl" data-aos="fade-up" data-aos-delay="400">
+                    View My Projects
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-slate-900">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="section-title"><i data-lucide="user-circle-2"></i>About Me</h2>
+                <p class="section-subtitle">My journey, my passion, and my goals in the world of technology.</p>
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-2" data-aos="fade-right" data-aos-delay="200">
+                        <img src="profile.jpg" alt="Student Professional Photo" class="rounded-2xl shadow-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="md:col-span-3" data-aos="fade-left" data-aos-delay="200">
+                        <div class="bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-700">
+                            <p class="text-lg leading-relaxed text-slate-300">
+                                Hello! I'm a dedicated student pursuing a degree in Computer Science and Technology at Nanjing University of Posts and Telecommunication. I am fascinated by how technology can be used to solve real-world problems and create amazing digital experiences. My coursework has provided me with a solid foundation in programming, algorithms, and software engineering principles. I am always eager to learn new technologies and apply my skills to challenging projects. My goal is to become a skilled software engineer and contribute to innovative projects that make a difference.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-slate-800/50">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="section-title"><i data-lucide="sparkles"></i>My Skills</h2>
+                <p class="section-subtitle">The technologies and tools I'm proficient with.</p>
+                <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-4">
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="100">Python</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="150">Java</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="200">C++</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="250">C</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="300">HTML & CSS</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="350">JavaScript</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="400">React</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="450">Node.js</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="500">SQL & Databases</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="550">Git & GitHub</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="600">Data Structures</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="650">Algorithms</span>
+                    <span class="skill-badge" data-aos="fade-up" data-aos-delay="700">Object-Oriented Programming</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-16 md:py-24 bg-slate-900">
+            <div class="container mx-auto px-4 md:px-6" data-aos="fade-up">
+                <h2 class="section-title"><i data-lucide="gem"></i>Portfolio</h2>
+                <p class="section-subtitle">A selection of my academic and personal projects.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+                    
+                    <!-- Portfolio Item 1 -->
+                    <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg portfolio-card border border-slate-700" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Digital+Clock" alt="Portfolio Item 1" class="w-full h-48 sm:h-52 object-cover">
+                        <div class="p-4 md:p-6">
+                            <h3 class="text-lg md:text-xl font-bold text-slate-100 mb-2">Digital Clock</h3>
+                            <p class="text-sm md:text-base text-slate-400 mb-4">A simple and elegant digital clock created with Java Programming. It displays the current time, updating every second.</p>
+                            <a href="https://github.com/kamrul135/Digital-Clock" class="text-indigo-400 font-semibold hover:underline group inline-flex items-center text-sm md:text-base">View on GitHub <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 2 -->
+                    <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg portfolio-card border border-slate-700" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=RPS+Game" alt="RPS Game" class="w-full h-48 sm:h-52 object-cover">
+                        <div class="p-4 md:p-6">
+                            <h3 class="text-lg md:text-xl font-bold text-slate-100 mb-2">RPS Game</h3>
+                            <p class="text-sm md:text-base text-slate-400 mb-4">A classic Rock, Paper, Scissors game built with Java Programming. Play against the computer and see if you can win!</p>
+                            <a href="https://github.com/kamrul135/RPS-Game" class="text-indigo-400 font-semibold hover:underline group inline-flex items-center text-sm md:text-base">View on GitHub <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 3 -->
+                    <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg portfolio-card border border-slate-700" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://placehold.co/600x400/d946ef/ffffff?text=Currency+Converter" alt="Portfolio Item 3" class="w-full h-48 sm:h-52 object-cover">
+                        <div class="p-4 md:p-6">
+                            <h3 class="text-lg md:text-xl font-bold text-slate-100 mb-2">Currency Converter</h3>
+                            <p class="text-sm md:text-base text-slate-400 mb-4">A simple currency converter application built with Java that allows users to convert between different currencies using real-time exchange rates.</p>
+                            <a href="https://github.com/kamrul135/Currency-Converter" class="text-indigo-400 font-semibold hover:underline group inline-flex items-center text-sm md:text-base">View on GitHub <i data-lucide="arrow-right" class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-slate-800/50">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <h2 class="section-title"><i data-lucide="mail-check"></i>Get In Touch</h2>
+                <p class="section-subtitle">I'm always open to new opportunities and collaborations. Feel free to reach out via the form below or directly at <a href="mailto:skhasan516578@gmail.com" class="text-indigo-400 hover:underline">skhasan516578@gmail.com</a>.</p>
+                <div class="max-w-2xl mx-auto bg-slate-800 p-8 rounded-2xl shadow-2xl border border-slate-700">
+                    <form action="#" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-slate-300 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-shadow text-slate-100" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-slate-300 font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john.doe@example.com" class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-shadow text-slate-100" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-slate-300 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message here..." class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-shadow text-slate-100" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-indigo-500 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 w-full flex items-center justify-center gap-2">
+                                <i data-lucide="send"></i> Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="mailto:skhasan516578@gmail.com" class="hover:text-indigo-400 transition-colors"><i data-lucide="mail" class="w-6 h-6"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition-colors"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+                <a href="#" class="hover:text-indigo-400 transition-colors"><i data-lucide="dribbble" class="w-6 h-6"></i></a>
+            </div>
+            <p>&copy; 2025 Md Kamrul Hasan. All Rights Reserved.</p>
+            <p class="text-sm text-slate-500 mt-2">Designed with <i data-lucide="heart" class="inline-block w-4 h-4 text-red-500"></i> and SK</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
