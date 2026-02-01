@@ -1,6 +1,6 @@
-# Cybersecurity Engineer Portfolio — Premium Edition
+# AI Engineer Portfolio — Premium Edition
 
-A modern, professional static portfolio for a cybersecurity engineer with premium design features including animations, glassmorphism effects, interactive elements, and responsive layouts.
+A modern, professional static portfolio for an AI engineer with premium design features including animations, glassmorphism effects, interactive elements, and responsive layouts.
 
 ## ✨ Premium Features
 
@@ -18,22 +18,22 @@ A modern, professional static portfolio for a cybersecurity engineer with premiu
 
 - `index.html` — Main portfolio page with hero, about, skills, projects, certifications, and contact
 - `styles.css` — Premium styling with animations, gradients, and modern effects
-- `projects/project1.html` — Network Segmentation Assessment detail page
-- `projects/project2.html` — Cloud Misconfiguration Hunt detail page
-- `projects/project3.html` — Incident Response Automation detail page
+- `projects/project1.html` — AI/ML Project detail page
+- `projects/project2.html` — Data Science Project detail page
+- `projects/project3.html` — Deep Learning Project detail page
 - `resume.html` — Print-ready resume with professional formatting
 - `README.md` — This file
 
 ## 🚀 How to Open Locally
 
 ### Method 1: Direct Open (Quick)
-Double-click `E:/Programing/html/CyberSecurity/index.html` to open in your default browser.
+Double-click `E:/Programing/html/AI Engineer/index.html` to open in your default browser.
 
 ### Method 2: Local Server (Recommended)
 For best experience with relative links and Font Awesome CDN:
 
 ```cmd
-cd /d E:\Programing\html\CyberSecurity
+cd /d "E:\Programing\html\AI Engineer"
 python -m http.server 8000
 ```
 
@@ -43,9 +43,9 @@ Then open http://localhost:8000 in your browser.
 
 ### 1. Personal Information
 Edit `index.html` to replace:
-- Name: Search for "Jane Doe" and replace with your name
+- Name: Replace with your name
 - Tagline and descriptions in the About section
-- Email: `youremail@example.com`
+- Email: Update to your email
 - Social links: LinkedIn, GitHub, Twitter URLs
 - **Profile Photo**: Add your photo as `images/profile.jpg` (see `images/README.md` for instructions)
 
@@ -116,4 +116,4 @@ Free to use and modify for your personal portfolio. Attribution appreciated but 
 
 ---
 
-**Need help?** Replace placeholder content with your actual information and deploy to showcase your cybersecurity expertise!
+**Need help?** Replace placeholder content with your actual information and deploy to showcase your AI engineering expertise!
