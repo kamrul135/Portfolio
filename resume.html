@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Md Kamrul Hasan — CV</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background: white; color: #0f172a; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    .cv { max-width: 900px; margin: 20px auto; padding: 28px; background: white; }
+    .cv-header { display:flex; gap:20px; align-items:center; }
+    .cv-photo { width:110px; height:110px; border-radius:12px; overflow:hidden; border:2px solid #eef2ff; }
+    .cv-photo img { width:100%; height:100%; object-fit:cover; }
+    .cv-title { flex:1; }
+    .cv-title h1 { margin:0; font-size:1.6rem; }
+    .cv-title p { margin:6px 0 0; color:#475569; }
+    .contact { margin-top:8px; color:#64748b; font-size:0.95rem; display:flex; gap:12px; flex-wrap:wrap; }
+    h2 { margin-top:20px; font-size:1rem; color:#0f172a; border-bottom:1px solid #eef2ff; padding-bottom:6px; text-transform:uppercase; }
+    ul { margin:8px 0 0 18px; color:#475569; line-height:1.6; }
+    .two-col { display:grid; grid-template-columns: 1fr 320px; gap:24px; align-items:start; }
+    .side { background:#f8fafc; padding:12px; border-radius:8px; border-left:4px solid #0ea5e9; }
+    .skills li { margin-bottom:6px; }
+    .projects a { color:#0ea5e9; text-decoration:none; }
+    @media (max-width:800px) { .two-col { grid-template-columns: 1fr; } .cv-photo { width:88px; height:88px; } }
+    @media print { body{background:white} .cv{padding:0;margin:0} a{color:#0f172a} }
+  </style>
+</head>
+<body>
+  <main class="cv">
+    <header class="cv-header">
+      <div class="cv-photo"><img src="images/profile.png" alt="Profile"></div>
+      <div class="cv-title">
+        <h1>Md Kamrul Hasan</h1>
+        <p>AI Engineer - ML Systems & Deployment</p>
+        <div class="contact">
+          <span><i class="fas fa-envelope"></i> hridoy516578@gmail.com</span>
+          <span><i class="fas fa-map-marker-alt"></i> Cumilla, Bangladesh</span>
+          <span><i class="fab fa-linkedin"></i> linkedin.com/in/iamkamrul07</span>
+          <span><i class="fab fa-github"></i> github.com/kamrul135</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="two-col">
+      <div>
+        <h2>Professional Summary</h2>
+        <p>Computer Science & Engineering student at Nanjing University of Posts and Telecommunications (NJUPT) with experience building and deploying production ML systems. Focused on designing scalable data pipelines, reproducible training, model serving, monitoring, and responsible AI.</p>
+
+        <h2>ACADEMIC & PERSONAL PROJECTS</h2>
+        <div class="projects">
+          <p><strong><a href="projects/project1.html">End-to-End ML System with Real Deployment</a></strong> — Built a course project that moves from raw data to a deployed model: simple ETL, feature engineering, model training, containerized serving, and a basic deployment script. Focus: reproducibility and end-to-end validation. (PyTorch, Docker, Flask)</p>
+          <p><strong><a href="projects/project2.html">LLM + RAG Application</a></strong> — Implemented a retrieval-augmented generation prototype to answer questions from a small document set. Learned vector indexing, retrieval, prompt design, and evaluation of responses. (LangChain, OpenAI API, FAISS)</p>
+          <p><strong><a href="projects/project3.html">MLOps Mini Platform</a></strong> — Created a mini MLOps toolkit to track experiments, register models, and run a simple CI pipeline for model packaging and tests. Aimed at practicing automation and model lifecycle basics. (MLflow, GitHub Actions, Docker)</p>
+        </div>
+
+        <h2>Highlights</h2>
+        <ul>
+          <li>Built production ML pipelines with automated retraining and CI/CD.</li>
+          <li>Instrumented models with monitoring, drift detection, and explainability.</li>
+          <li>Designed cost- and latency-aware LLM orchestration for QA workflows.</li>
+        </ul>
+      </div>
+
+      <aside class="side">
+        <h2>Core Skills</h2>
+        <ul class="skills">
+          <li>Machine Learning: PyTorch, TensorFlow, scikit-learn</li>
+          <li>MLOps: Airflow, Docker, Kubernetes, CI/CD</li>
+          <li>Deployment: TorchServe, TF Serving, BentoML</li>
+          <li>Data: Pandas, Spark, SQL</li>
+          <li>Monitoring: Evidently, Prometheus, MLflow</li>
+          <li>LLMs: Prompt engineering, LangChain, OpenAI API</li>
+          <li>Tools: Git, Docker, Linux, MLflow, W&B</li>
+        </ul>
+
+        <h2>Education</h2>
+        <p><strong>BSc — Computer Science & Engineering</strong><br>Nanjing University of Posts and Telecommunications (NJUPT)</p>
+
+        <!-- Certifications section removed per user request -->
+      </aside>
+    </section>
+
+    <footer style="margin-top:18px; color:#64748b; font-size:0.95rem; text-align:center;">
+      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer. Print to PDF to export.</small>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

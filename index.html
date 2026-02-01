@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Md Kamrul Hasan — AI Engineer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Professional portfolio of an AI Engineer — machine learning systems, MLOps, model deployment, and responsible AI." />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <div class="loader-circle"></div>
+      <div class="loader-text">Loading</div>
+    </div>
+  </div>
+
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <header class="site-header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div>
+            <h1>Md Kamrul Hasan</h1>
+            <p class="tagline">AI Engineer</p>
+          </div>
+        </div>
+        
+        <nav class="top-nav" id="main-nav">
+          <a href="#about" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+          </a>
+          <a href="#skills" class="nav-link">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+          </a>
+          <a href="#projects" class="nav-link">
+            <i class="fas fa-folder-open"></i>
+            <span>Projects</span>
+          </a>
+          <a href="resume.html" class="nav-link">
+            <i class="fas fa-file-alt"></i>
+            <span>Resume</span>
+          </a>
+          <a href="#contact" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+        
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">AI & Machine Learning Specialist</div>
+      <h1>Architecting Intelligence,<br><span class="gradient-text">Engineering Excellence</span></h1>
+      <p>Transforming complex data into production-ready ML systems • End-to-end MLOps pipelines • Scalable AI infrastructure</p>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span>Get In Touch</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+        <a href="resume.html" target="_blank" class="btn btn-outline" title="View Resume">
+          <span>View Resume</span>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="about" class="card">
+          <h2><i class="fas fa-user-shield"></i> About Me</h2>
+      <div class="about-content">
+        <div class="profile-photo">
+          <img src="images/profile.png" alt="Md Kamrul Hasan - Profile photo" />
+          <div class="photo-overlay">
+            <i class="fas fa-camera"></i>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="lead-text">Passionate AI Engineer specializing in designing and deploying enterprise-grade machine learning systems. Currently pursuing Computer Science & Engineering at Nanjing University of Posts and Telecommunications (NJUPT), with proven expertise in transforming cutting-edge research into production-ready solutions.</p>
+          <p>My approach combines rigorous software engineering principles with state-of-the-art ML techniques to build scalable, maintainable AI systems. I thrive at the intersection of research and implementation, ensuring models deliver real-world impact while maintaining operational excellence.</p>
+          <div class="info-grid">
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>Education</strong>
+                <span>Computer Science & Engineering<br>Nanjing University of Posts and Telecommunications</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Location</strong>
+                <span>Cumilla, Bangladesh<br>Open to remote & on-site opportunities</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <strong>Specialization</strong>
+                <span>ML Systems Architecture<br>Production MLOps & Deployment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2><i class="fas fa-tools"></i> Technical Expertise</h2>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
+          <ul>
+            <li>Deep Learning Architectures (CNNs, RNNs, Transformers)</li>
+            <li>Advanced Model Training & Optimization</li>
+            <li>Reinforcement Learning & Transfer Learning</li>
+            <li>LLM Fine-tuning & Prompt Engineering</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-rocket"></i> MLOps & Deployment</h3>
+          <ul>
+            <li>Production Model Serving (TorchServe, TF Serving, BentoML)</li>
+            <li>CI/CD Pipelines (Kubeflow, MLflow, GitHub Actions)</li>
+            <li>Container Orchestration (Docker, Kubernetes)</li>
+            <li>Model Monitoring & A/B Testing</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Data Engineering</h3>
+          <ul>
+            <li>Distributed Computing (Apache Spark, Dask)</li>
+            <li>ETL Pipeline Design & Optimization</li>
+            <li>Feature Engineering & Store Management</li>
+            <li>SQL & NoSQL Database Architecture</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
+          <ul>
+            <li>AWS SageMaker, GCP AI Platform, Azure ML</li>
+            <li>Serverless ML (Lambda, Cloud Functions)</li>
+            <li>Infrastructure as Code (Terraform, CloudFormation)</li>
+            <li>Cost Optimization & Resource Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        <button class="filter-btn" data-filter="llm">LLM & NLP</button>
+        <button class="filter-btn" data-filter="mlops">MLOps</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project" data-category="ml mlops">
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <h3><a href="projects/project1.html">Production ML System & Deployment Pipeline</a></h3>
+          <p>Architected and deployed an end-to-end machine learning system featuring automated ETL pipelines, advanced feature engineering, and containerized model serving with real-time inference capabilities.</p>
+          <div class="project-impact">
+            <i class="fas fa-chart-line"></i>
+            <strong>Impact:</strong> Reduced model deployment time by 65% and achieved 99.8% uptime with automated monitoring. Processed 10TB+ of data with optimized ETL pipelines.
+          </div>
+          <div class="project-links">
+            <a href="projects/project1.html" class="project-link" title="View detailed case study">
+              <i class="fas fa-file-alt"></i> Case Study
+            </a>
+            <a href="https://github.com/kamrul135" target="_blank" rel="noopener" class="project-link" title="View source code">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+          <div class="project-tags">
+            <span data-tooltip="Used for building deep learning models with dynamic computation graphs">PyTorch</span>
+            <span data-tooltip="Containerized the entire ML pipeline for consistent deployments">Docker</span>
+            <span data-tooltip="Built REST API for real-time model inference">Flask</span>
+            <span data-tooltip="Designed RESTful endpoints for model serving">REST API</span>
+          </div>
+        </article>
+
+        <article class="project" data-category="llm">
+          <div class="project-icon"><i class="fas fa-brain"></i></div>
+          <h3><a href="projects/project2.html">Intelligent RAG System with LLM Integration</a></h3>
+          <p>Developed a sophisticated retrieval-augmented generation system leveraging large language models for context-aware document querying with vector embeddings and semantic search.</p>
+          <div class="project-impact">
+            <i class="fas fa-chart-line"></i>
+            <strong>Impact:</strong> Improved response accuracy by 45% with citation tracking. Handles 1M+ document embeddings with sub-second query response time.
+          </div>
+          <div class="project-links">
+            <a href="projects/project2.html" class="project-link" title="View detailed case study">
+              <i class="fas fa-file-alt"></i> Case Study
+            </a>
+            <a href="#" class="project-link demo-link" title="Try live demo">
+              <i class="fas fa-play-circle"></i> Live Demo
+            </a>
+            <a href="https://github.com/kamrul135" target="_blank" rel="noopener" class="project-link" title="View source code">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+          <div class="project-tags">
+            <span data-tooltip="Framework for building LLM-powered applications">LangChain</span>
+            <span data-tooltip="GPT models for text generation and embeddings">OpenAI API</span>
+            <span data-tooltip="Fast similarity search for vector embeddings">FAISS</span>
+            <span data-tooltip="Stores document embeddings for semantic retrieval">Vector DB</span>
+          </div>
+        </article>
+
+        <article class="project" data-category="mlops">
+          <div class="project-icon"><i class="fas fa-puzzle-piece"></i></div>
+          <h3><a href="projects/project3.html">Enterprise MLOps Platform</a></h3>
+          <p>Engineered a comprehensive MLOps platform enabling seamless experiment tracking, model versioning, and automated CI/CD pipelines for end-to-end model lifecycle management.</p>
+          <div class="project-impact">
+            <i class="fas fa-chart-line"></i>
+            <strong>Impact:</strong> Reduced model downtime by 40% with automated monitoring. Accelerated deployment cycles from weeks to hours with CI/CD automation.
+          </div>
+          <div class="project-links">
+            <a href="projects/project3.html" class="project-link" title="View detailed case study">
+              <i class="fas fa-file-alt"></i> Case Study
+            </a>
+            <a href="https://github.com/kamrul135" target="_blank" rel="noopener" class="project-link" title="View source code">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+          <div class="project-tags">
+            <span data-tooltip="Tracks experiments, models, and parameters">MLflow</span>
+            <span data-tooltip="Automated testing and deployment workflows">GitHub Actions</span>
+            <span data-tooltip="Containerized ML workflows for consistency">Docker</span>
+            <span data-tooltip="Continuous integration and deployment pipelines">CI/CD</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certifications & Credentials section removed per user request -->
+
+    <section id="contact" class="card contact-section">
+      <h2><i class="fas fa-paper-plane"></i> Let's Build Something Amazing</h2>
+      <p class="contact-intro">Open to collaborating on innovative ML projects, consulting opportunities, and full-time positions. Let's discuss how we can work together.</p>
+      
+      <div class="contact-wrapper">
+        <div class="contact-form-container">
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xovqqakz" method="POST">
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name">
+              <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+              <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+              <input type="text" id="subject" name="subject" required placeholder="Project inquiry, collaboration, etc.">
+              <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
+              <span class="error-message"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i> Sending...
+              </span>
+              <i class="fas fa-paper-plane btn-icon"></i>
+            </button>
+          </form>
+          
+          <div id="form-success" class="form-success" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. I'll get back to you soon.</p>
+          </div>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <a id="contact-email" href="mailto:hridoy516578@gmail.com">hridoy516578@gmail.com</a>
+              <button id="copy-email" class="icon-btn" aria-label="Copy email"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/iamkamrul07" target="_blank" rel="noopener noreferrer">linkedin.com/in/iamkamrul07</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <strong>GitHub</strong>
+              <a href="https://github.com/kamrul135" target="_blank" rel="noopener noreferrer">github.com/kamrul135</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-twitter"></i>
+            <div>
+              <strong>Twitter</strong>
+              <a href="https://twitter.com/kamrul135" target="_blank" rel="noopener noreferrer">@kamrul135</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer. All rights reserved.</small>
+      <p style="margin-top: 8px; font-size: 0.85rem;">Engineered with precision • Deployed with purpose • Powered by innovation</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Add scroll effect to header
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Smooth scroll with offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offsetTop = target.offsetTop - 100;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+  <script src="scripts.js"></script>
+</body>
+</html>
