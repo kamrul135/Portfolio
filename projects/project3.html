@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>MLOps Platform with Automated Retraining — AI Project Details</title>
+  <title>CNN Image Classification — AI Project Details</title>
   <link rel="stylesheet" href="../premium-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -106,135 +106,84 @@
   <div class="container">
     <div class="project-header">
       <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
-      <h1 class="project-title"><i class="fas fa-cogs"></i> MLOps Platform with Automated Retraining</h1>
-      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">Complete MLOps pipeline with experiment tracking, model versioning, automated retraining on data drift, CI/CD deployment, and A/B testing framework.</p>
-      
+      <h1 class="project-title"><i class="fas fa-brain"></i> CNN Image Classification</h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+        State-of-the-art Convolutional Neural Network (CNN) implemented for high-accuracy image classification
+        on the MNIST and CIFAR-10 datasets using TensorFlow and Keras framework.
+      </p>
+
       <div class="project-meta">
-        <span><i class="fas fa-calendar-alt"></i> Duration: 8 weeks</span>
-        <span><i class="fas fa-rocket"></i> Domain: MLOps & DevOps</span>
+        <span><i class="fas fa-calendar-alt"></i> Duration: 5 weeks</span>
+        <span><i class="fas fa-network-wired"></i> Domain: Deep Learning</span>
         <span><i class="fas fa-flag"></i> Type: Personal Project</span>
       </div>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-bullseye"></i> Project Overview</h3>
-      <p>Architected and implemented a production-grade MLOps platform covering the entire ML lifecycle: experiment tracking, model registry, automated retraining pipelines, drift detection, CI/CD for model deployment, and A/B testing infrastructure. The platform enables data scientists to rapidly iterate on models while maintaining production stability and observability. Reduced model deployment time from days to hours while ensuring reproducibility and compliance.</p>
+      <p>
+        Design and implementation of deep learning models to solve computer vision tasks. The project focused on building and training Convolutional Neural Networks (CNNs) to classify images into predefined categories. Starting with the MNIST dataset for handwritten digit recognition, the project scaled to the more complex CIFAR-10 dataset for object classification. The goal was to understand CNN architectures, handle overfitting, and optimize model performance.
+      </p>
     </div>
 
     <div class="stats-grid">
       <div class="stat-card">
-        <span class="stat-number">85%</span>
-        <span class="stat-label">Faster Deployments</span>
+        <span class="stat-number">99.2%</span>
+        <span class="stat-label">MNIST Accuracy</span>
       </div>
       <div class="stat-card">
-        <span class="stat-number">100%</span>
-        <span class="stat-label">Reproducible Experiments</span>
+        <span class="stat-number">88%</span>
+        <span class="stat-label">CIFAR-10 Accuracy</span>
       </div>
       <div class="stat-card">
-        <span class="stat-number">24/7</span>
-        <span class="stat-label">Automated Monitoring</span>
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Layers Implemented</span>
       </div>
       <div class="stat-card">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Models in Production</span>
+        <span class="stat-number">Fast</span>
+        <span class="stat-label">GPU Training</span>
       </div>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-puzzle-piece"></i> Key Components</h3>
+      <h3><i class="fas fa-puzzle-piece"></i> Key Features</h3>
       <ul style="line-height: 2; color: var(--text-secondary);">
-        <li><i class="fas fa-database" style="color: var(--primary);"></i> <strong>Experiment Tracking:</strong> MLflow integration for logging hyperparameters, metrics, and artifacts with reproducible environments</li>
-        <li><i class="fas fa-archive" style="color: var(--primary);"></i> <strong>Model Registry:</strong> Centralized model versioning with stage transitions (staging/production) and lineage tracking</li>
-        <li><i class="fas fa-sync-alt" style="color: var(--primary);"></i> <strong>Automated Retraining:</strong> Scheduled pipelines and drift-triggered retraining with Kubeflow workflows</li>
-        <li><i class="fas fa-chart-line" style="color: var(--primary);"></i> <strong>Drift Detection:</strong> Statistical tests and monitoring for data drift, concept drift, and model performance degradation</li>
-        <li><i class="fas fa-rocket" style="color: var(--primary);"></i> <strong>CI/CD Pipeline:</strong> GitHub Actions for automated testing, packaging, and deployment to Kubernetes</li>
-        <li><i class="fas fa-flask" style="color: var(--primary);"></i> <strong>A/B Testing:</strong> Traffic splitting and statistical analysis for comparing model versions in production</li>
+        <li><i class="fas fa-layer-group" style="color: var(--primary);"></i> <strong>Custom CNN Architecture:</strong> Designed a sequential model with multiple Convolutional, Pooling, and Dense layers.</li>
+        <li><i class="fas fa-images" style="color: var(--primary);"></i> <strong>Data Augmentation:</strong> Implemented techniques like rotation, zoom, and horizontal flips to increase dataset diversity and prevent overfitting.</li>
+        <li><i class="fas fa-chart-line" style="color: var(--primary);"></i> <strong>Visualization:</strong> Plotted training history (accuracy/loss curves) and confusion matrices to analyze model behavior.</li>
+        <li><i class="fas fa-tachometer-alt" style="color: var(--primary);"></i> <strong>Performance Optimization:</strong> Used Dropout layers and Batch Normalization to improve training stability and generalization.</li>
+        <li><i class="fas fa-save" style="color: var(--primary);"></i> <strong>Model Saving:</strong> Implemented callbacks for Model Checkpointing and Early Stopping.</li>
       </ul>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-toolbox"></i> Technologies & Stack</h3>
       <div class="tech-badges">
-        <span class="badge">MLflow</span>
-        <span class="badge">Kubeflow</span>
-        <span class="badge">Kubernetes</span>
-        <span class="badge">Docker</span>
-        <span class="badge">GitHub Actions</span>
-        <span class="badge">Prometheus</span>
-        <span class="badge">Grafana</span>
-        <span class="badge">FastAPI</span>
-        <span class="badge">PostgreSQL</span>
-        <span class="badge">MinIO</span>
-      </div>
-    </div>
-
-    <div class="content-section">
-      <h3><i class="fas fa-sitemap"></i> Platform Architecture</h3>
-      
-      <div style="background: rgba(255, 255, 255, 0.03); padding: 24px; border-radius: 12px; margin: 20px 0;">
-        <h4 style="color: var(--primary); margin-bottom: 12px;"><i class="fas fa-flask"></i> Experimentation Phase</h4>
-        <ol style="line-height: 2; color: var(--text-secondary);">
-          <li>Data scientists develop models locally or on remote compute</li>
-          <li>MLflow tracks all experiments: hyperparameters, metrics, artifacts</li>
-          <li>Best models registered to Model Registry with metadata</li>
-          <li>Automated model validation tests run on registration</li>
-          <li>Model promoted to "Staging" for further evaluation</li>
-        </ol>
-      </div>
-
-      <div style="background: rgba(255, 255, 255, 0.03); padding: 24px; border-radius: 12px; margin: 20px 0;">
-        <h4 style="color: var(--primary); margin-bottom: 12px;"><i class="fas fa-rocket"></i> Deployment Pipeline</h4>
-        <ol style="line-height: 2; color: var(--text-secondary);">
-          <li>Model promoted to "Production" in registry</li>
-          <li>GitHub Actions CI/CD pipeline triggered automatically</li>
-          <li>Automated tests: unit tests, integration tests, performance benchmarks</li>
-          <li>Model packaged into Docker container with dependencies</li>
-          <li>Deployed to Kubernetes with rolling update strategy</li>
-          <li>A/B test configured to gradually shift traffic (10% → 50% → 100%)</li>
-          <li>Monitoring dashboards updated with new model metrics</li>
-        </ol>
-      </div>
-
-      <div style="background: rgba(255, 255, 255, 0.03); padding: 24px; border-radius: 12px; margin: 20px 0;">
-        <h4 style="color: var(--primary); margin-bottom: 12px;"><i class="fas fa-chart-line"></i> Monitoring & Retraining</h4>
-        <ol style="line-height: 2; color: var(--text-secondary);">
-          <li>Prometheus collects real-time metrics: latency, throughput, error rates</li>
-          <li>Custom metrics monitor prediction distributions and feature statistics</li>
-          <li>Drift detection algorithms run daily to compare with baseline</li>
-          <li>Alert triggered if significant drift or performance degradation detected</li>
-          <li>Kubeflow retraining pipeline automatically triggered</li>
-          <li>New model trained on fresh data, validated, and deployed</li>
-          <li>Process repeats continuously for model freshness</li>
-        </ol>
+        <span class="badge">Python</span>
+        <span class="badge">TensorFlow</span>
+        <span class="badge">Keras</span>
+        <span class="badge">NumPy</span>
+        <span class="badge">Matplotlib</span>
+        <span class="badge">OpenCV</span>
+        <span class="badge">Jupyter Notebooks</span>
       </div>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-code"></i> Technical Highlights</h3>
       <ul style="line-height: 2; color: var(--text-secondary);">
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Zero-downtime deployments</strong> with Kubernetes rolling updates and health checks</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Reproducible environments</strong> using Docker and MLflow artifact tracking</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Automated testing</strong> catching model regressions before production</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Model versioning</strong> enabling instant rollback to previous versions</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Cost optimization</strong> through resource limits and autoscaling policies</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Architecture Tuning:</strong> Experimented with kernel sizes, stride lengths, and activation functions (ReLU, Softmax).</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Regularization:</strong> Applied L2 regularization and Dropout to mitigate overfitting on training data.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Optimizer Selection:</strong> Compared Adam, SGD, and RMSprop optimizers to find the fastest convergence.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Evaluation:</strong> Detailed classification report including precision, recall, and F1-score for each class.</li>
       </ul>
     </div>
 
     <div class="highlight-box">
-      <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Impact</h3>
-      <p>Reduced model deployment time by 85% (from 3 days to 4 hours) through automation. Achieved 100% experiment reproducibility with MLflow tracking and containerization. Enabled continuous model improvement with automated retraining, maintaining production accuracy above 90%. The platform supports 12 production models serving 100K+ predictions daily with 99.9% uptime. A/B testing framework reduced risk of deploying underperforming models, saving significant business impact.</p>
-    </div>
-
-    <div class="content-section">
-      <h3><i class="fas fa-lightbulb"></i> Lessons Learned</h3>
-      <ul style="line-height: 2; color: var(--text-secondary);">
-        <li>MLOps is 90% software engineering and 10% machine learning - invest in robust infrastructure</li>
-        <li>Monitoring and observability are critical for maintaining production ML systems</li>
-        <li>Automated retraining prevents model degradation but requires careful validation</li>
-        <li>Reproducibility through versioning (code, data, environment) saves countless debugging hours</li>
-        <li>A/B testing provides confidence when deploying new model versions</li>
-        <li>Start simple and iterate - don't build the entire platform upfront</li>
-      </ul>
+      <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Outcome</h3>
+      <p>
+        The developed CNN model achieved exceptional accuracy of 99.2% on the MNIST test set and a competitive 88% on CIFAR-10. The implementation of data augmentation successfully reduced the gap between training and validation accuracy. This project solidified understanding of deep learning fundamentals and practical implementation of neural networks using modern frameworks.
+      </p>
     </div>
   </div>
 
