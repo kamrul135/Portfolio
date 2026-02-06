@@ -1,383 +1,1101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Md Kamrul Hasan — AI Engineer Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Professional portfolio of an AI Engineer — machine learning systems, MLOps, model deployment, and responsible AI." />
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Kamrul Hasan | AI Engineer Portfolio</title>
+    <meta name="description" content="Aspiring AI/ML Engineer specializing in Full Stack Development, Machine Learning, and Deep Learning">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="premium-style.css">
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div id="loading-screen">
-    <div class="loader-content">
-      <div class="loader-circle"></div>
-      <div class="loader-text">Loading</div>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="progressBar"></div>
     </div>
-  </div>
 
-  <!-- Particles Background -->
-  <div id="particles-js"></div>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
 
-  <header class="site-header" id="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo-section">
-          <div class="logo-icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <div>
-            <h1>Md Kamrul Hasan</h1>
-            <p class="tagline">AI Engineer</p>
-          </div>
+    <!-- Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="brand-icon">
+                    <div class="binary-bg" data-text="01"></div>
+                    <div class="icon-particles">
+                        <span class="particle"></span>
+                        <span class="particle"></span>
+                        <span class="particle"></span>
+                        <span class="particle"></span>
+                    </div>
+                    <i class="fas fa-brain ai-brain"></i>
+                    <div class="icon-overlay"></div>
+                    <div class="scanning-line"></div>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">
+                        <span class="name-letter">K</span>
+                        <span class="name-letter">a</span>
+                        <span class="name-letter">m</span>
+                        <span class="name-letter">r</span>
+                        <span class="name-letter">u</span>
+                        <span class="name-letter">l</span>
+                        <span class="name-space"> </span>
+                        <span class="name-letter">H</span>
+                        <span class="name-letter">a</span>
+                        <span class="name-letter">s</span>
+                        <span class="name-letter">a</span>
+                        <span class="name-letter">n</span>
+                    </span>
+                    <span class="brand-title">
+                        <span class="ai-symbol">⚡</span>
+                        <span class="title-text">AI Engineer</span>
+                        <span class="title-pulse"></span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="resume.html" class="btn-resume">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Resume</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
         </div>
         
-        <nav class="top-nav" id="main-nav">
-          <a href="#about" class="nav-link">
-            <i class="fas fa-user"></i>
-            <span>About</span>
-          </a>
-          <a href="#skills" class="nav-link">
-            <i class="fas fa-code"></i>
-            <span>Skills</span>
-          </a>
-          <a href="#projects" class="nav-link">
-            <i class="fas fa-folder-open"></i>
-            <span>Projects</span>
-          </a>
-          <a href="resume.html" class="nav-link">
-            <i class="fas fa-file-alt"></i>
-            <span>Resume</span>
-          </a>
-          <a href="#contact" class="nav-link">
-            <i class="fas fa-envelope"></i>
-            <span>Contact</span>
-          </a>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
-        </nav>
-        
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge">AI & Machine Learning Specialist</div>
-      <h1>Architecting Intelligence,<br><span class="gradient-text">Engineering Excellence</span></h1>
-      <p>Transforming complex data into production-ready ML systems • End-to-end MLOps pipelines • Scalable AI infrastructure</p>
-      <div class="cta-buttons">
-        <a href="#projects" class="btn btn-primary">
-          <span>View Projects</span>
-          <i class="fas fa-arrow-right"></i>
-        </a>
-        <a href="#contact" class="btn btn-secondary">
-          <span>Get In Touch</span>
-          <i class="fas fa-paper-plane"></i>
-        </a>
-        <a href="resume.html" target="_blank" class="btn btn-outline" title="View Resume">
-          <span>View Resume</span>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <main class="container">
-    <section id="about" class="card">
-          <h2><i class="fas fa-user-shield"></i> About Me</h2>
-      <div class="about-content">
-        <div class="profile-photo">
-          <img src="images/profile.png" alt="Md Kamrul Hasan - Profile photo" />
-          <div class="photo-overlay">
-            <i class="fas fa-camera"></i>
-          </div>
-        </div>
-        <div class="about-text">
-          <p class="lead-text">Passionate AI Engineer specializing in designing and deploying enterprise-grade machine learning systems. Currently pursuing Computer Science & Engineering at Nanjing University of Posts and Telecommunications (NJUPT), with proven expertise in transforming cutting-edge research into production-ready solutions.</p>
-          <p>My approach combines rigorous software engineering principles with state-of-the-art ML techniques to build scalable, maintainable AI systems. I thrive at the intersection of research and implementation, ensuring models deliver real-world impact while maintaining operational excellence.</p>
-          <div class="info-grid">
-            <div class="info-item">
-              <i class="fas fa-graduation-cap"></i>
-              <div>
-                <strong>Education</strong>
-                <span>Computer Science & Engineering<br>Nanjing University of Posts and Telecommunications</span>
-              </div>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <strong>Location</strong>
-                <span>Cumilla, Bangladesh<br>Open to remote & on-site opportunities</span>
-              </div>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-chart-line"></i>
-              <div>
-                <strong>Specialization</strong>
-                <span>ML Systems Architecture<br>Production MLOps & Deployment</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="card">
-      <h2><i class="fas fa-tools"></i> Technical Expertise</h2>
-      <div class="skills-categories">
-        <div class="skill-category">
-          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-          <ul>
-            <li>Deep Learning Architectures (CNNs, RNNs, Transformers)</li>
-            <li>Advanced Model Training & Optimization</li>
-            <li>Reinforcement Learning & Transfer Learning</li>
-            <li>LLM Fine-tuning & Prompt Engineering</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-rocket"></i> MLOps & Deployment</h3>
-          <ul>
-            <li>Production Model Serving (TorchServe, TF Serving, BentoML)</li>
-            <li>CI/CD Pipelines (Kubeflow, MLflow, GitHub Actions)</li>
-            <li>Container Orchestration (Docker, Kubernetes)</li>
-            <li>Model Monitoring & A/B Testing</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-database"></i> Data Engineering</h3>
-          <ul>
-            <li>Distributed Computing (Apache Spark, Dask)</li>
-            <li>ETL Pipeline Design & Optimization</li>
-            <li>Feature Engineering & Store Management</li>
-            <li>SQL & NoSQL Database Architecture</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
-          <ul>
-            <li>AWS SageMaker, GCP AI Platform, Azure ML</li>
-            <li>Serverless ML (Lambda, Cloud Functions)</li>
-            <li>Infrastructure as Code (Terraform, CloudFormation)</li>
-            <li>Cost Optimization & Resource Management</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="card">
-      <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="ml">Machine Learning</button>
-        <button class="filter-btn" data-filter="llm">LLM & NLP</button>
-        <button class="filter-btn" data-filter="mlops">MLOps</button>
-      </div>
-      <div class="projects-grid">
-        <article class="project" data-category="ml mlops">
-          <div class="project-icon"><i class="fas fa-robot"></i></div>
-          <h3><a href="projects/project1.html">Production ML System & Deployment Pipeline</a></h3>
-          <p>Architected and deployed an end-to-end machine learning system featuring automated ETL pipelines, advanced feature engineering, and containerized model serving with real-time inference capabilities.</p>
-          <div class="project-impact">
-            <i class="fas fa-chart-line"></i>
-            <strong>Impact:</strong> Reduced model deployment time by 65% and achieved 99.8% uptime with automated monitoring. Processed 10TB+ of data with optimized ETL pipelines.
-          </div>
-          <div class="project-links">
-            <a href="projects/project1.html" class="project-link" title="View detailed case study">
-              <i class="fas fa-file-alt"></i> Case Study
-            </a>
-            <a href="https://github.com/kamrul135" target="_blank" rel="noopener" class="project-link" title="View source code">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-          <div class="project-tags">
-            <span data-tooltip="Used for building deep learning models with dynamic computation graphs">PyTorch</span>
-            <span data-tooltip="Containerized the entire ML pipeline for consistent deployments">Docker</span>
-            <span data-tooltip="Built REST API for real-time model inference">Flask</span>
-            <span data-tooltip="Designed RESTful endpoints for model serving">REST API</span>
-          </div>
-        </article>
-
-        <article class="project" data-category="llm">
-          <div class="project-icon"><i class="fas fa-brain"></i></div>
-          <h3><a href="projects/project2.html">Intelligent RAG System with LLM Integration</a></h3>
-          <p>Developed a sophisticated retrieval-augmented generation system leveraging large language models for context-aware document querying with vector embeddings and semantic search.</p>
-          <div class="project-impact">
-            <i class="fas fa-chart-line"></i>
-            <strong>Impact:</strong> Improved response accuracy by 45% with citation tracking. Handles 1M+ document embeddings with sub-second query response time.
-          </div>
-          <div class="project-links">
-            <a href="projects/project2.html" class="project-link" title="View detailed case study">
-              <i class="fas fa-file-alt"></i> Case Study
-            </a>
-            <a href="#" class="project-link demo-link" title="Try live demo">
-              <i class="fas fa-play-circle"></i> Live Demo
-            </a>
-            <a href="https://github.com/kamrul135" target="_blank" rel="noopener" class="project-link" title="View source code">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-          <div class="project-tags">
-            <span data-tooltip="Framework for building LLM-powered applications">LangChain</span>
-            <span data-tooltip="GPT models for text generation and embeddings">OpenAI API</span>
-            <span data-tooltip="Fast similarity search for vector embeddings">FAISS</span>
-            <span data-tooltip="Stores document embeddings for semantic retrieval">Vector DB</span>
-          </div>
-        </article>
-
-        <article class="project" data-category="mlops">
-          <div class="project-icon"><i class="fas fa-puzzle-piece"></i></div>
-          <h3><a href="projects/project3.html">Enterprise MLOps Platform</a></h3>
-          <p>Engineered a comprehensive MLOps platform enabling seamless experiment tracking, model versioning, and automated CI/CD pipelines for end-to-end model lifecycle management.</p>
-          <div class="project-impact">
-            <i class="fas fa-chart-line"></i>
-            <strong>Impact:</strong> Reduced model downtime by 40% with automated monitoring. Accelerated deployment cycles from weeks to hours with CI/CD automation.
-          </div>
-          <div class="project-links">
-            <a href="projects/project3.html" class="project-link" title="View detailed case study">
-              <i class="fas fa-file-alt"></i> Case Study
-            </a>
-            <a href="https://github.com/kamrul135" target="_blank" rel="noopener" class="project-link" title="View source code">
-              <i class="fab fa-github"></i> GitHub
-            </a>
-          </div>
-          <div class="project-tags">
-            <span data-tooltip="Tracks experiments, models, and parameters">MLflow</span>
-            <span data-tooltip="Automated testing and deployment workflows">GitHub Actions</span>
-            <span data-tooltip="Containerized ML workflows for consistency">Docker</span>
-            <span data-tooltip="Continuous integration and deployment pipelines">CI/CD</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Certifications & Credentials section removed per user request -->
-
-    <section id="contact" class="card contact-section">
-      <h2><i class="fas fa-paper-plane"></i> Let's Build Something Amazing</h2>
-      <p class="contact-intro">Open to collaborating on innovative ML projects, consulting opportunities, and full-time positions. Let's discuss how we can work together.</p>
-      
-      <div class="contact-wrapper">
-        <div class="contact-form-container">
-          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xovqqakz" method="POST">
-            <div class="form-group">
-              <label for="name"><i class="fas fa-user"></i> Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your full name">
-              <span class="error-message"></span>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for Opportunities</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Kamrul Hasan</span>
+                </h1>
+                
+                <h2 class="hero-subtitle">
+                    <span class="typing-text"></span>
+                    <span class="cursor-blink">|</span>
+                </h2>
+                
+                <p class="hero-description">
+                    Aspiring AI/ML Engineer with strong foundations in Full Stack Development, 
+                    Machine Learning, and Deep Learning. Currently learning and building 
+                    real-world projects to create impactful solutions.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
             </div>
             
-            <div class="form-group">
-              <label for="email"><i class="fas fa-envelope"></i> Email</label>
-              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-              <span class="error-message"></span>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="card-glow"></div>
+                    <img src="images/profile.png" alt="Profile" class="profile-image">
+                    <div class="floating-icons">
+                        <div class="float-icon" style="--delay: 0s; --tx: -20px; --ty: -30px;">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 0.5s; --tx: 40px; --ty: -20px;">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 1s; --tx: -40px; --ty: 30px;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="float-icon" style="--delay: 1.5s; --tx: 35px; --ty: 40px;">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="form-group">
-              <label for="subject"><i class="fas fa-tag"></i> Subject</label>
-              <input type="text" id="subject" name="subject" required placeholder="Project inquiry, collaboration, etc.">
-              <span class="error-message"></span>
-            </div>
-            
-            <div class="form-group">
-              <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or inquiry..."></textarea>
-              <span class="error-message"></span>
-            </div>
-            
-            <button type="submit" class="btn btn-primary submit-btn">
-              <span class="btn-text">Send Message</span>
-              <span class="btn-loading" style="display: none;">
-                <i class="fas fa-spinner fa-spin"></i> Sending...
-              </span>
-              <i class="fas fa-paper-plane btn-icon"></i>
-            </button>
-          </form>
-          
-          <div id="form-success" class="form-success" style="display: none;">
-            <i class="fas fa-check-circle"></i>
-            <h3>Message Sent Successfully!</h3>
-            <p>Thank you for reaching out. I'll get back to you soon.</p>
-          </div>
         </div>
         
-        <div class="contact-grid">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>Email</strong>
-              <a id="contact-email" href="mailto:hridoy516578@gmail.com">hridoy516578@gmail.com</a>
-              <button id="copy-email" class="icon-btn" aria-label="Copy email"><i class="fas fa-copy"></i> Copy</button>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
             </div>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            <div>
-              <strong>LinkedIn</strong>
-              <a href="https://www.linkedin.com/in/iamkamrul07" target="_blank" rel="noopener noreferrer">linkedin.com/in/iamkamrul07</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-github"></i>
-            <div>
-              <strong>GitHub</strong>
-              <a href="https://github.com/kamrul135" target="_blank" rel="noopener noreferrer">github.com/kamrul135</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-twitter"></i>
-            <div>
-              <strong>Twitter</strong>
-              <a href="https://twitter.com/kamrul135" target="_blank" rel="noopener noreferrer">@kamrul135</a>
-            </div>
-          </div>
+            <span>Scroll Down</span>
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer. All rights reserved.</small>
-      <p style="margin-top: 8px; font-size: 0.85rem;">Engineered with precision • Deployed with purpose • Powered by innovation</p>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My journey in technology and what drives me</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>🎓 Education & Background</h3>
+                        <p>
+                            I'm currently pursuing <strong>Computer Science & Engineering</strong> at 
+                            <strong>Nanjing University of Posts and Telecommunications (NJUPT)</strong>, 
+                            with a focus on Artificial Intelligence and Machine Learning.
+                        </p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3>💡 Passion & Goals</h3>
+                        <p>
+                            My passion lies in creating intelligent solutions that solve real-world problems. 
+                            I'm actively learning <strong>Deep Learning</strong> and <strong>MLOps</strong>, 
+                            while building projects that bridge theory with practical applications.
+                        </p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3>🚀 What I Do</h3>
+                        <p>
+                            I specialize in <strong>Full Stack Development</strong> with React and Node.js, 
+                            building <strong>Machine Learning models</strong> with Scikit-learn, and exploring 
+                            <strong>Deep Learning</strong> with TensorFlow and PyTorch. I enjoy the entire 
+                            process from data preprocessing to model deployment.
+                        </p>
+                    </div>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Problem-solving mindset</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Continuous learner</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Team collaboration</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Detail-oriented</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="progress-card">
+                        <h4>Current Learning Focus</h4>
+                        <div class="learning-items">
+                            <div class="learning-item">
+                                <div class="learning-header">
+                                    <span class="learning-name">Deep Learning</span>
+                                    <span class="learning-percent">Learning</span>
+                                </div>
+                                <div class="learning-bar">
+                                    <div class="learning-progress" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="learning-item">
+                                <div class="learning-header">
+                                    <span class="learning-name">Python & ML</span>
+                                    <span class="learning-percent">85%</span>
+                                </div>
+                                <div class="learning-bar">
+                                    <div class="learning-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="learning-item">
+                                <div class="learning-header">
+                                    <span class="learning-name">Web Development</span>
+                                    <span class="learning-percent">80%</span>
+                                </div>
+                                <div class="learning-bar">
+                                    <div class="learning-progress" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="learning-item">
+                                <div class="learning-header">
+                                    <span class="learning-name">Data Science</span>
+                                    <span class="learning-percent">75%</span>
+                                </div>
+                                <div class="learning-bar">
+                                    <div class="learning-progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interests-card">
+                        <h4>Interests</h4>
+                        <div class="interest-tags">
+                            <span class="tag">🤖 AI/ML</span>
+                            <span class="tag">🧠 Deep Learning</span>
+                            <span class="tag">💻 Full Stack</span>
+                            <span class="tag">📊 Data Science</span>
+                            <span class="tag">☁️ Cloud Computing</span>
+                            <span class="tag">🐳 DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Tools and technologies I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Java / C++</span>
+                                <span class="skill-level">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Structures & Algorithms -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>Data Structures & Algorithms</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag dsa">Arrays & Strings</span>
+                        <span class="tech-tag dsa">Linked Lists</span>
+                        <span class="tech-tag dsa">Trees & Graphs</span>
+                        <span class="tech-tag dsa">Hash Tables</span>
+                        <span class="tech-tag dsa">Sorting & Searching</span>
+                        <span class="tech-tag dsa">Dynamic Programming</span>
+                        <span class="tech-tag dsa">Recursion</span>
+                        <span class="tech-tag dsa">Time Complexity</span>
+                    </div>
+                </div>
+                
+                <!-- Web Development -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tech-tag"><i class="fab fa-react"></i> React.js</span>
+                        <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-tag"><i class="fas fa-flask"></i> Flask</span>
+                        <span class="tech-tag"><i class="fas fa-server"></i> REST APIs</span>
+                    </div>
+                </div>
+                
+                <!-- Machine Learning -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag ml">Scikit-learn</span>
+                        <span class="tech-tag ml">Regression</span>
+                        <span class="tech-tag ml">Classification</span>
+                        <span class="tech-tag ml">Clustering</span>
+                        <span class="tech-tag ml">Data Preprocessing</span>
+                        <span class="tech-tag ml">Model Evaluation</span>
+                    </div>
+                </div>
+                
+                <!-- Deep Learning -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Deep Learning <span class="badge-learning">Learning</span></h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag dl">TensorFlow</span>
+                        <span class="tech-tag dl">Keras</span>
+                        <span class="tech-tag dl">PyTorch Basics</span>
+                        <span class="tech-tag dl">CNN</span>
+                        <span class="tech-tag dl">MNIST / CIFAR-10</span>
+                    </div>
+                </div>
+                
+                <!-- Databases -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag db">MySQL</span>
+                        <span class="tech-tag db">PostgreSQL</span>
+                        <span class="tech-tag db">MongoDB</span>
+                    </div>
+                </div>
+                
+                <!-- Data & Visualization -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data & Visualization</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag data">Pandas</span>
+                        <span class="tech-tag data">NumPy</span>
+                        <span class="tech-tag data">Matplotlib</span>
+                        <span class="tech-tag data">Seaborn</span>
+                        <span class="tech-tag data">Plotly</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Deployment -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools & Deployment</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag tool"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="tech-tag tool"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="tech-tag tool"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="tech-tag tool">Heroku</span>
+                        <span class="tech-tag tool">Render</span>
+                        <span class="tech-tag tool">HuggingFace</span>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="soft-skills">
+                        <div class="soft-skill">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="soft-skill">
+                            <i class="fas fa-book-open"></i>
+                            <span>Fast Learner</span>
+                        </div>
+                        <div class="soft-skill">
+                            <i class="fas fa-users"></i>
+                            <span>Team Work</span>
+                        </div>
+                        <div class="soft-skill">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world applications I've built</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="House Price Prediction">
+                        <div class="project-overlay">
+                            <a href="projects/project1.html" class="project-link">
+                                <i class="fas fa-eye"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag ml">Machine Learning</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+                        <h3 class="project-title">House Price Prediction</h3>
+                        <p class="project-description">
+                            ML model predicting house prices using regression algorithms. 
+                            Includes data preprocessing, feature engineering, and model evaluation.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-chart-bar"></i> Scikit-learn</span>
+                            <span><i class="fas fa-table"></i> Pandas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <a href="projects/project2.html" class="project-link">
+                                <i class="fas fa-eye"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag web">Full Stack</span>
+                            <span class="project-tag">React</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            Complete e-commerce application with React frontend, Node.js backend, 
+                            user authentication, and PostgreSQL database.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fab fa-node-js"></i> Node.js</span>
+                            <span><i class="fas fa-database"></i> PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project3.jpg" alt="CNN Image Classification">
+                        <div class="project-overlay">
+                            <a href="projects/project3.html" class="project-link">
+                                <i class="fas fa-eye"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag dl">Deep Learning</span>
+                            <span class="project-tag">TensorFlow</span>
+                        </div>
+                        <h3 class="project-title">CNN Image Classification</h3>
+                        <p class="project-description">
+                            Convolutional Neural Network for image classification on MNIST 
+                            and CIFAR-10 datasets using TensorFlow and Keras.
+                        </p>
+                        <div class="project-tech">
+                            <span><i class="fas fa-brain"></i> TensorFlow</span>
+                            <span><i class="fab fa-python"></i> Keras</span>
+                            <span><i class="fas fa-image"></i> CNN</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="see-more-container">
+                <button class="see-more-btn" id="seeMoreProjectsBtn">
+                    <span>See More Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Modal -->
+    <div class="projects-modal" id="projectsModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <h2><i class="fas fa-folder-open"></i> All Projects</h2>
+                <button class="modal-close-btn" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-projects-grid">
+                <!-- Project 4 -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/project4.jpg" alt="COVID Dashboard">
+                        <div class="modal-project-overlay">
+                            <a href="#" class="modal-project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag data">Data Science</span>
+                            <span class="modal-project-tag">Visualization</span>
+                        </div>
+                        <h3 class="modal-project-title">COVID-19 Dashboard</h3>
+                        <p class="modal-project-description">
+                            Interactive data visualization dashboard for COVID-19 statistics 
+                            using Plotly and Pandas. Deployed on Heroku.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-chart-line"></i> Plotly</span>
+                            <span><i class="fas fa-table"></i> Pandas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/project1.jpg" alt="Sentiment Analysis">
+                        <div class="modal-project-overlay">
+                            <a href="#" class="modal-project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag dl">NLP</span>
+                            <span class="modal-project-tag">Python</span>
+                        </div>
+                        <h3 class="modal-project-title">Sentiment Analysis Tool</h3>
+                        <p class="modal-project-description">
+                            Natural Language Processing model for sentiment analysis using 
+                            BERT and Transformers. Analyzes customer reviews and feedback.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-brain"></i> BERT</span>
+                            <span><i class="fas fa-language"></i> NLP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/project2.jpg" alt="Task Manager API">
+                        <div class="modal-project-overlay">
+                            <a href="#" class="modal-project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Backend</span>
+                            <span class="modal-project-tag">REST API</span>
+                        </div>
+                        <h3 class="modal-project-title">Task Manager API</h3>
+                        <p class="modal-project-description">
+                            RESTful API for task management with authentication, CRUD operations,
+                            and real-time updates using Node.js and MongoDB.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-node-js"></i> Node.js</span>
+                            <span><i class="fas fa-database"></i> MongoDB</span>
+                            <span><i class="fas fa-shield-alt"></i> JWT</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/project3.jpg" alt="Weather App">
+                        <div class="modal-project-overlay">
+                            <a href="#" class="modal-project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Frontend</span>
+                            <span class="modal-project-tag">API</span>
+                        </div>
+                        <h3 class="modal-project-title">Weather Forecast App</h3>
+                        <p class="modal-project-description">
+                            Modern weather application with real-time data from OpenWeather API.
+                            Features include forecasts, location search, and weather maps.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fas fa-cloud"></i> API</span>
+                            <span><i class="fas fa-map"></i> Maps</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/portfolio.png" alt="Portfolio Website">
+                        <div class="modal-project-overlay">
+                            <a href="https://github.com/kamrul135/Portfolio" class="modal-project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Frontend</span>
+                            <span class="modal-project-tag">Design</span>
+                        </div>
+                        <h3 class="modal-project-title">Portfolio Website</h3>
+                        <p class="modal-project-description">
+                            Responsive portfolio website with modern animations, dark mode,
+                            and interactive components. Built with HTML, CSS, and JavaScript.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-html5"></i> HTML5</span>
+                            <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/project2.jpg" alt="Blog Platform">
+                        <div class="modal-project-overlay">
+                            <a href="#" class="modal-project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View Details</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Full Stack</span>
+                            <span class="modal-project-tag">CMS</span>
+                        </div>
+                        <h3 class="modal-project-title">Blog Platform</h3>
+                        <p class="modal-project-description">
+                            Full-featured blogging platform with rich text editor, user profiles,
+                            comments, and admin dashboard. Built with Django and React.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-python"></i> Django</span>
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fas fa-database"></i> PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: Currency Converter -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/currency-converter.png" alt="Currency Converter">
+                        <div class="modal-project-overlay">
+                            <a href="https://github.com/kamrul135/Currency-Converter" class="modal-project-link" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Desktop App</span>
+                            <span class="modal-project-tag">Java</span>
+                        </div>
+                        <h3 class="modal-project-title">Currency Converter</h3>
+                        <p class="modal-project-description">
+                            Java-based currency converter application with GUI interface for live exchange rate
+                            fetching and instant conversions with user-friendly feedback.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-java"></i> Java</span>
+                            <span><i class="fas fa-desktop"></i> Swing GUI</span>
+                            <span><i class="fas fa-exchange-alt"></i> API Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11: Digital Clock -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/digital-clock.png" alt="Digital Clock">
+                        <div class="modal-project-overlay">
+                            <a href="https://github.com/kamrul135/Digital-Clock" class="modal-project-link" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Desktop App</span>
+                            <span class="modal-project-tag">Java</span>
+                        </div>
+                        <h3 class="modal-project-title">Digital Clock</h3>
+                        <p class="modal-project-description">
+                            Java-based digital clock application with real-time updates, AM/PM display, and
+                            customizable interface for desktop environments.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-java"></i> Java</span>
+                            <span><i class="fas fa-desktop"></i> Swing GUI</span>
+                            <span><i class="fas fa-clock"></i> Timer Utils</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12: Rock Paper Scissors -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/rps-game.png" alt="Rock Paper Scissors Game">
+                        <div class="modal-project-overlay">
+                            <a href="https://github.com/kamrul135/RPS-Game" class="modal-project-link" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Game</span>
+                            <span class="modal-project-tag">Java</span>
+                        </div>
+                        <h3 class="modal-project-title">Rock Paper Scissors</h3>
+                        <p class="modal-project-description">
+                            Java-based Rock-Paper-Scissors game with interactive GUI, animated feedback, 
+                            score tracking, and clean game logic implementation.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-java"></i> Java</span>
+                            <span><i class="fas fa-desktop"></i> Swing GUI</span>
+                            <span><i class="fas fa-gamepad"></i> Game Logic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13: Phone Directory Hash Table -->
+                <div class="modal-project-card">
+                    <div class="modal-project-image">
+                        <img src="images/phone-directory.png" alt="Phone Directory Hash Table">
+                        <div class="modal-project-overlay">
+                            <a href="https://github.com/kamrul135/Phone-Directory-Hash-Table-Application" class="modal-project-link" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-project-content">
+                        <div class="modal-project-tags">
+                            <span class="modal-project-tag web">Web App</span>
+                            <span class="modal-project-tag">Python</span>
+                        </div>
+                        <h3 class="modal-project-title">Phone Directory (Hash Table)</h3>
+                        <p class="modal-project-description">
+                            Flask-based phone directory web application implementing hash table data structure
+                            for efficient contact management with search, add, and delete operations.
+                        </p>
+                        <div class="modal-project-tech">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-flask"></i> Flask</span>
+                            <span><i class="fas fa-sitemap"></i> Hash Tables</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">💬 Get In Touch</span>
+                <h2 class="section-title">Let's Create Something <span class="gradient-text">Amazing</span></h2>
+                <p class="section-subtitle">Have a project in mind or just want to connect? I'd love to hear from you!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-info-header">
+                        <h3>Contact Information</h3>
+                        <p class="contact-description">
+                            Feel free to reach out for opportunities, collaborations, or just to say hello!
+                        </p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method" data-aos="fade-right" data-aos-delay="100">
+                            <div class="method-icon gradient-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Email Address</span>
+                                <a href="mailto:hridoy516578@gmail.com" class="method-link">hridoy516578@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-aos="fade-right" data-aos-delay="200">
+                            <div class="method-icon gradient-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">Location</span>
+                                <span class="method-value">Cumilla, Bangladesh</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-aos="fade-right" data-aos-delay="300">
+                            <div class="method-icon gradient-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">LinkedIn Profile</span>
+                                <a href="https://linkedin.com/in/iamkamrul07" target="_blank" class="method-link">@iamkamrul07</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method" data-aos="fade-right" data-aos-delay="400">
+                            <div class="method-icon gradient-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-details">
+                                <span class="method-label">GitHub Profile</span>
+                                <a href="https://github.com/kamrul135" target="_blank" class="method-link">@kamrul135</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/kamrul135" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/iamkamrul07" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:hridoy516578@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Md Kamrul Hasan</h3>
+                    <p>Aspiring AI/ML Engineer • Full Stack Developer</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/kamrul135" target="_blank">GitHub</a>
+                        <a href="https://linkedin.com/in/iamkamrul07" target="_blank">LinkedIn</a>
+                        <a href="mailto:hridoy516578@gmail.com">Email</a>
+                        <a href="resume.html">Resume</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Md Kamrul Hasan. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="premium-script.js"></script>
     
-    // Add scroll effect to header
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-    
-    // Smooth scroll with offset
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          const offsetTop = target.offsetTop - 100;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
+    <script>
+        // Projects Modal functionality
+        const projectsModal = document.getElementById('projectsModal');
+        const seeMoreBtn = document.getElementById('seeMoreProjectsBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+
+        // Open modal
+        seeMoreBtn.addEventListener('click', () => {
+            projectsModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close modal
+        function closeModal() {
+            projectsModal.classList.remove('active');
+            document.body.style.overflow = '';
         }
-      });
-    });
-  </script>
-  <script src="scripts.js"></script>
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && projectsModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>

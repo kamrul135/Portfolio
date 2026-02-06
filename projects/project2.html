@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cloud Misconfiguration Hunt — Project Details</title>
-  <link rel="stylesheet" href="../styles.css">
+  <title>Enterprise RAG System — AI Project Details</title>
+  <link rel="stylesheet" href="../premium-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .project-header {
@@ -89,89 +89,91 @@
   <div class="container">
     <div class="project-header">
       <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
-      <h1 class="project-title"><i class="fas fa-cloud"></i> Cloud Misconfiguration Hunt</h1>
-      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">Comprehensive AWS environment audit to detect misconfigurations, insecure resource policies, and compliance violations.</p>
+      <h1 class="project-title"><i class="fas fa-robot"></i> Enterprise RAG System for Document Q&A</h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">Intelligent retrieval-augmented generation system processing 10,000+ technical documents with semantic search and context-aware LLM responses.</p>
       
       <div class="project-meta">
-        <span><i class="fas fa-calendar-alt"></i> Duration: 3 weeks</span>
-        <span><i class="fas fa-cloud"></i> Platform: AWS</span>
-        <span><i class="fas fa-shield-alt"></i> Type: Security Audit</span>
+        <span><i class="fas fa-calendar-alt"></i> Duration: 5 weeks</span>
+        <span><i class="fas fa-book"></i> Domain: NLP & LLMs</span>
+        <span><i class="fas fa-flag"></i> Type: Personal Project</span>
       </div>
-    </div>
 
     <div class="content-section">
       <h3><i class="fas fa-bullseye"></i> Project Overview</h3>
-      <p>Conducted a comprehensive security audit of an AWS cloud environment to identify misconfigurations, insecure resource policies, and compliance violations. Leveraged automated scanning tools and manual testing to assess S3 buckets, IAM policies, security groups, and infrastructure as code templates.</p>
+      <p>Built an enterprise-grade RAG (Retrieval-Augmented Generation) system that enables natural language querying over 10,000+ technical documents. Implemented intelligent document chunking, semantic search with vector embeddings, hybrid retrieval (dense + sparse), and prompt engineering for accurate, context-aware responses. Reduced query latency by 60% through optimization and achieved 85% answer accuracy on benchmark evaluation set.</p>
     </div>
 
     <div class="warning-box">
-      <h3 style="color: var(--accent); margin-bottom: 12px;"><i class="fas fa-exclamation-triangle"></i> Critical Findings</h3>
+      <h3 style="color: var(--accent); margin-bottom: 12px;"><i class="fas fa-lightbulb"></i> Technical Challenges & Solutions</h3>
       <ul style="line-height: 2;">
-        <li><strong>High:</strong> S3 buckets with public read access containing sensitive customer data</li>
-        <li><strong>High:</strong> IAM roles with overly permissive policies (wildcard actions and resources)</li>
-        <li><strong>Medium:</strong> Security groups allowing unrestricted ingress on critical ports</li>
-        <li><strong>Medium:</strong> Unencrypted EBS volumes and RDS instances</li>
-        <li><strong>Low:</strong> CloudTrail logging disabled in several regions</li>
+        <li><strong>Challenge:</strong> Large document corpus causing slow retrieval → <strong>Solution:</strong> Implemented hierarchical indexing with Pinecone</li>
+        <li><strong>Challenge:</strong> Context window limitations → <strong>Solution:</strong> Smart chunking with overlap and metadata tagging</li>
+        <li><strong>Challenge:</strong> Irrelevant retrieved chunks → <strong>Solution:</strong> Hybrid search (dense + BM25) with reranking</li>
+        <li><strong>Challenge:</strong> Hallucination in responses → <strong>Solution:</strong> Prompt engineering with cite-sources instructions</li>
+        <li><strong>Challenge:</strong> High API costs → <strong>Solution:</strong> Caching layer and prompt optimization</li>
       </ul>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-toolbox"></i> Tools & Technologies</h3>
       <div class="tech-badges">
-        <span class="badge">AWS CLI</span>
-        <span class="badge">Scout2</span>
-        <span class="badge">Prowler</span>
-        <span class="badge">Terraform</span>
-        <span class="badge">CloudTrail</span>
-        <span class="badge">AWS Config</span>
-        <span class="badge">Python</span>
-        <span class="badge">Boto3</span>
+        <span class="badge">LangChain</span>
+        <span class="badge">Pinecone</span>
+        <span class="badge">OpenAI GPT-4</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">Streamlit</span>
+        <span class="badge">HuggingFace</span>
+        <span class="badge">Redis</span>
+        <span class="badge">Docker</span>
       </div>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-tasks"></i> Remediation Strategy</h3>
+      <h3><i class="fas fa-project-diagram"></i> System Architecture</h3>
       <ol style="line-height: 2; color: var(--text-secondary);">
-        <li><strong>Immediate Actions:</strong> Revoked public S3 bucket access and implemented bucket policies with least privilege</li>
-        <li><strong>IAM Hardening:</strong> Refactored IAM policies to follow principle of least privilege, removed wildcard permissions</li>
-        <li><strong>Network Security:</strong> Tightened security group rules, implemented VPC flow logs for monitoring</li>
-        <li><strong>Encryption:</strong> Enabled encryption at rest for all S3 buckets, EBS volumes, and RDS instances</li>
-        <li><strong>Compliance:</strong> Enabled CloudTrail and AWS Config in all regions for continuous monitoring</li>
-        <li><strong>Automation:</strong> Implemented Terraform compliance scans in CI/CD pipeline to prevent future misconfigurations</li>
+        <li><strong>Document Ingestion:</strong> PDF/Markdown parsing, cleaning, metadata extraction</li>
+        <li><strong>Chunking Strategy:</strong> Recursive text splitting with 500-token chunks and 50-token overlap</li>
+        <li><strong>Embedding Generation:</strong> OpenAI text-embedding-3-large for vector representations</li>
+        <li><strong>Vector Storage:</strong> Pinecone index with metadata filtering capabilities</li>
+        <li><strong>Hybrid Retrieval:</strong> Dense vector search + BM25 sparse retrieval combined with RRF</li>
+        <li><strong>Reranking:</strong> Cross-encoder model for relevance scoring of retrieved chunks</li>
+        <li><strong>LLM Generation:</strong> GPT-4 with carefully crafted prompts for context-aware answers</li>
+        <li><strong>Caching Layer:</strong> Redis for frequently asked questions to reduce latency and cost</li>
       </ol>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-code"></i> Automation & Continuous Compliance</h3>
-      <p>Developed automated compliance scanning using Terraform Sentinel policies and AWS Config rules. Integrated security checks into CI/CD pipeline to catch misconfigurations before deployment. Created custom Lambda functions for automated remediation of common issues.</p>
-      <div class="tech-badges" style="margin-top: 16px;">
-        <span class="badge">Infrastructure as Code</span>
-        <span class="badge">Policy as Code</span>
-        <span class="badge">Automated Remediation</span>
-        <span class="badge">Continuous Monitoring</span>
-      </div>
+      <h3><i class="fas fa-star"></i> Key Features & Metrics</h3>
+      <ul style="line-height: 2; color: var(--text-secondary);">
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>85% answer accuracy</strong> on evaluation benchmark (500 Q&A pairs)</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>1.2s average response time</strong> (60% faster than initial baseline)</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>10,000+ documents</strong> indexed with semantic search</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Hybrid retrieval</strong> improving recall by 25% over pure vector search</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>40% cost reduction</strong> through caching and prompt optimization</li>
+      </ul>
     </div>
 
     <div class="highlight-box">
       <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Outcome</h3>
-      <p>Successfully eliminated all critical and high-risk findings within 2 weeks. Implemented automated compliance scanning that prevents 95% of common misconfigurations before deployment. Achieved SOC 2 Type II compliance readiness and reduced security incident response time by 60% through improved logging and monitoring.</p>
+      <p>Successfully deployed a production-ready RAG system that processes 500+ queries daily with high accuracy and low latency. The hybrid retrieval approach significantly improved answer quality, while the caching layer reduced operational costs by 40%. Built an intuitive Streamlit interface for users to interact with the system. This project demonstrates expertise in LLM application development, vector databases, and production system optimization.</p>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-lightbulb"></i> Key Takeaways</h3>
       <ul style="line-height: 2; color: var(--text-secondary);">
-        <li>Cloud misconfigurations remain a top attack vector and data breach cause</li>
-        <li>Automated scanning tools are essential but require manual validation</li>
-        <li>Infrastructure as Code enables security as code through policy enforcement</li>
-        <li>Continuous monitoring and automated remediation improve security posture</li>
-        <li>Principle of least privilege should guide all IAM policy design</li>
+        <li>Chunking strategy significantly impacts retrieval quality and should be domain-specific</li>
+        <li>Hybrid search (dense + sparse) outperforms pure vector search for most use cases</li>
+        <li>Reranking retrieved chunks improves relevance and reduces hallucination</li>
+        <li>Careful prompt engineering is crucial for controlling LLM behavior and output format</li>
+        <li>Caching and optimization are essential for cost-effective production LLM applications</li>
+        <li>Evaluation benchmarks enable iterative improvement and performance tracking</li>
       </ul>
     </div>
   </div>
 
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> Jane Doe — Cybersecurity Engineer</small>
+      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer</small>
     </div>
   </footer>
 

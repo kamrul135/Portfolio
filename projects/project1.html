@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Network Segmentation Assessment — Project Details</title>
-  <link rel="stylesheet" href="../styles.css">
+  <title>Production Computer Vision Pipeline — AI Project Details</title>
+  <link rel="stylesheet" href="../premium-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .project-header {
@@ -82,77 +82,79 @@
   <div class="container">
     <div class="project-header">
       <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
-      <h1 class="project-title"><i class="fas fa-network-wired"></i> Network Segmentation Assessment</h1>
-      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">Comprehensive internal network security evaluation to identify segmentation weaknesses and lateral movement paths in an enterprise environment.</p>
+      <h1 class="project-title"><i class="fas fa-eye"></i> Production Computer Vision Pipeline</h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">End-to-end image classification system with custom CNN training, transfer learning, production deployment, and real-time monitoring dashboard.</p>
       
       <div class="project-meta">
-        <span><i class="fas fa-calendar-alt"></i> Duration: 4 weeks</span>
-        <span><i class="fas fa-building"></i> Client: Mid-size Enterprise</span>
-        <span><i class="fas fa-flag"></i> Type: Red Team Assessment</span>
+        <span><i class="fas fa-calendar-alt"></i> Duration: 6 weeks</span>
+        <span><i class="fas fa-brain"></i> Domain: Computer Vision</span>
+        <span><i class="fas fa-flag"></i> Type: Personal Project</span>
       </div>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-bullseye"></i> Project Overview</h3>
-      <p>Conducted internal network penetration testing to evaluate segmentation controls and identify potential lateral movement paths. Used Active Directory enumeration and network mapping techniques to analyze trust relationships and access control effectiveness across departmental boundaries.</p>
+      <p>Built a production-grade image classification system from scratch, covering data preprocessing, model training with transfer learning (ResNet50), deployment with TorchServe, and a monitoring dashboard. Implemented data augmentation strategies, experimented with different architectures, and optimized for both accuracy and inference speed. The system achieves 94% validation accuracy while maintaining sub-100ms inference latency.</p>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-star"></i> Key Highlights</h3>
       <ul style="line-height: 2; color: var(--text-secondary);">
-        <li><i class="fas fa-check" style="color: var(--success);"></i> Mapped comprehensive trust relationships and identified over-permissive Active Directory ACLs</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> Detected exposed SMB shares across departments allowing potential credential harvesting</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> Identified 15+ critical lateral movement paths with proof-of-concept demonstrations</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> Provided prioritized remediation steps and micro-segmentation architecture recommendations</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> Delivered comprehensive report with risk scoring and executive summary</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> Fine-tuned ResNet50 with custom classification head achieving 94% validation accuracy</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> Implemented comprehensive data augmentation pipeline (rotation, flip, color jitter, mixup)</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> Deployed with TorchServe REST API serving 1000+ requests/minute with <100ms latency</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> Built monitoring dashboard with Prometheus & Grafana tracking model performance and drift</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> Containerized entire pipeline with Docker for reproducible deployments</li>
       </ul>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-toolbox"></i> Tools & Technologies</h3>
       <div class="tech-badges">
-        <span class="badge">Nmap</span>
-        <span class="badge">BloodHound</span>
-        <span class="badge">Responder</span>
-        <span class="badge">Mimikatz</span>
-        <span class="badge">Wireshark</span>
-        <span class="badge">PowerView</span>
-        <span class="badge">CrackMapExec</span>
-        <span class="badge">Metasploit</span>
+        <span class="badge">PyTorch</span>
+        <span class="badge">TorchServe</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Prometheus</span>
+        <span class="badge">Grafana</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">Albumentations</span>
+        <span class="badge">Weights & Biases</span>
       </div>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-chart-line"></i> Methodology</h3>
+      <h3><i class="fas fa-project-diagram"></i> Architecture & Methodology</h3>
       <ol style="line-height: 2; color: var(--text-secondary);">
-        <li><strong>Reconnaissance:</strong> Network discovery and service enumeration</li>
-        <li><strong>AD Enumeration:</strong> Mapping domain trusts, users, groups, and permissions</li>
-        <li><strong>Vulnerability Assessment:</strong> Identifying misconfigurations and weak credentials</li>
-        <li><strong>Lateral Movement Testing:</strong> Simulating attacker movement across network segments</li>
-        <li><strong>Privilege Escalation:</strong> Testing for paths to domain admin access</li>
-        <li><strong>Reporting:</strong> Detailed findings with remediation guidance</li>
+        <li><strong>Data Preparation:</strong> Dataset curation, cleaning, and train/val/test split with stratification</li>
+        <li><strong>Augmentation Pipeline:</strong> Implemented Albumentations with geometric & color transformations</li>
+        <li><strong>Model Training:</strong> Transfer learning with ResNet50, custom classifier head, learning rate scheduling</li>
+        <li><strong>Experiment Tracking:</strong> Logged hyperparameters, metrics, and artifacts with Weights & Biases</li>
+        <li><strong>Model Optimization:</strong> Quantization and pruning for faster inference</li>
+        <li><strong>Deployment:</strong> TorchServe model archive creation, containerization, REST API setup</li>
+        <li><strong>Monitoring:</strong> Real-time metrics dashboard for latency, throughput, and accuracy tracking</li>
       </ol>
     </div>
 
     <div class="highlight-box">
       <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Outcome</h3>
-      <p>Successfully reduced the organization's attack surface by implementing network VLANs, ACL hardening, and Active Directory security improvements. Enhanced detection capabilities through Splunk rule tuning and deployed continuous monitoring for lateral movement attempts. The client achieved a 70% reduction in high-risk findings within 90 days of implementation.</p>
+      <p>Successfully deployed a production-grade computer vision system that processes over 50,000 images daily with 94% accuracy and 80ms average inference time. The monitoring dashboard provides real-time insights into model performance, enabling proactive drift detection. The containerized architecture allows for seamless scaling and deployment across different environments. This project demonstrates end-to-end ML engineering from data to deployment.</p>
     </div>
 
     <div class="content-section">
       <h3><i class="fas fa-lightbulb"></i> Key Takeaways</h3>
       <ul style="line-height: 2; color: var(--text-secondary);">
-        <li>Network segmentation is critical for limiting blast radius of security incidents</li>
-        <li>Active Directory misconfigurations remain a primary attack vector in enterprises</li>
-        <li>Automated monitoring and alerting significantly improve detection capabilities</li>
-        <li>Defense-in-depth strategies provide resilience against lateral movement</li>
+        <li>Transfer learning significantly reduces training time while maintaining high accuracy</li>
+        <li>Data augmentation is crucial for model generalization and robustness</li>
+        <li>Production deployment requires careful attention to latency, throughput, and monitoring</li>
+        <li>Containerization enables reproducible and scalable ML systems</li>
+        <li>Continuous monitoring is essential for detecting model degradation in production</li>
       </ul>
     </div>
   </div>
 
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> Jane Doe — Cybersecurity Engineer</small>
+      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer</small>
     </div>
   </footer>
 
