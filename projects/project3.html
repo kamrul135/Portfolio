@@ -3,10 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CNN Image Classification — AI Project Details</title>
+  <title>SkyMap AI — AI Project Details</title>
   <link rel="stylesheet" href="../premium-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    /* Cosmic Background Animation */
+    body {
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(2px 2px at 20% 30%, white, transparent),
+        radial-gradient(2px 2px at 60% 70%, white, transparent),
+        radial-gradient(1px 1px at 50% 50%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(2px 2px at 90% 60%, white, transparent),
+        radial-gradient(1px 1px at 33% 90%, white, transparent);
+      background-size: 200% 200%;
+      background-position: 0% 0%;
+      animation: stars 20s ease-in-out infinite;
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+    }
+    @keyframes stars {
+      0%, 100% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* GitHub Link Button */
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s ease;
+      margin: 20px 0;
+    }
+    .github-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(102, 126, 234, 0.6);
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+    .github-link i {
+      font-size: 1.4rem;
+    }
+    
     .project-header {
       padding: 60px 0 40px;
       border-bottom: 1px solid var(--border);
@@ -29,10 +89,16 @@
       font-size: 3rem;
       font-weight: 800;
       margin-bottom: 16px;
-      background: linear-gradient(135deg, #fff, var(--primary));
+      background: linear-gradient(135deg, #667eea, #764ba2, #f093fb, #4facfe);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      animation: gradient-shift 3s ease infinite;
+      background-size: 200% 200%;
+    }
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
     .project-meta {
       display: flex;
@@ -53,13 +119,18 @@
       margin: 24px 0;
     }
     .badge {
-      background: rgba(0, 212, 255, 0.1);
-      border: 1px solid var(--primary);
-      color: var(--primary);
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+      border: 1px solid #667eea;
+      color: #a78bfa;
       padding: 8px 16px;
       border-radius: 20px;
       font-size: 0.9rem;
       font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .badge:hover {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+      transform: scale(1.05);
     }
     .content-section {
       margin: 48px 0;
@@ -92,7 +163,10 @@
     .stat-number {
       font-size: 2.5rem;
       font-weight: 800;
-      color: var(--primary);
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       display: block;
     }
     .stat-label {
@@ -106,83 +180,102 @@
   <div class="container">
     <div class="project-header">
       <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
-      <h1 class="project-title"><i class="fas fa-brain"></i> CNN Image Classification</h1>
+      <h1 class="project-title"><i class="fas fa-cloud-sun"></i> SkyMap AI</h1>
       <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
-        State-of-the-art Convolutional Neural Network (CNN) implemented for high-accuracy image classification
-        on the MNIST and CIFAR-10 datasets using TensorFlow and Keras framework.
+        An AI-powered Weather Intelligence Platform built with React that combines real-time weather data from OpenWeather API with an intelligent decision-making engine to provide smart, actionable weather insights. Features a modern sidebar navigation, multiple views, AI chat assistant, and exceptional mobile responsiveness.
       </p>
+      
+      <a href="https://github.com/kamrul135/SkyMap-AI" target="_blank" class="github-link">
+        <i class="fab fa-github"></i>
+        View on GitHub
+        <i class="fas fa-external-link-alt" style="font-size: 0.9rem;"></i>
+      </a>
 
       <div class="project-meta">
-        <span><i class="fas fa-calendar-alt"></i> Duration: 5 weeks</span>
-        <span><i class="fas fa-network-wired"></i> Domain: Deep Learning</span>
-        <span><i class="fas fa-flag"></i> Type: Personal Project</span>
+        <span><i class="fas fa-calendar-alt"></i> Duration: 8 weeks</span>
+        <span><i class="fas fa-star"></i> Domain: AI & Weather</span>
+        <span><i class="fas fa-rocket"></i> Type: Full-Stack Web App</span>
       </div>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-bullseye"></i> Project Overview</h3>
+      <h3><i class="fas fa-cloud-sun"></i> Project Overview</h3>
       <p>
-        Design and implementation of deep learning models to solve computer vision tasks. The project focused on building and training Convolutional Neural Networks (CNNs) to classify images into predefined categories. Starting with the MNIST dataset for handwritten digit recognition, the project scaled to the more complex CIFAR-10 dataset for object classification. The goal was to understand CNN architectures, handle overfitting, and optimize model performance.
+        SkyMap AI is an AI-powered Weather Intelligence Platform built with React 18 that combines real-time weather data 
+        from OpenWeather API with a rule-based AI decision engine to deliver smart, actionable insights. The app features 
+        a modern sidebar navigation with 5 views (Weather, Cities, Map, Trends, Settings), an interactive AI chat assistant, 
+        7-day forecasts, outfit recommendations, and a comfort scoring system. The architecture follows a clean service-layer 
+        pattern with 12 React components, 5 service modules, and an optional Python ML backend using FastAPI and scikit-learn.
       </p>
     </div>
 
     <div class="stats-grid">
       <div class="stat-card">
-        <span class="stat-number">99.2%</span>
-        <span class="stat-label">MNIST Accuracy</span>
+        <span class="stat-number">12</span>
+        <span class="stat-label">React Components</span>
       </div>
       <div class="stat-card">
-        <span class="stat-number">88%</span>
-        <span class="stat-label">CIFAR-10 Accuracy</span>
+        <span class="stat-number">5</span>
+        <span class="stat-label">App Views</span>
       </div>
       <div class="stat-card">
-        <span class="stat-number">10+</span>
-        <span class="stat-label">Layers Implemented</span>
+        <span class="stat-number">2,873</span>
+        <span class="stat-label">Lines of CSS</span>
       </div>
       <div class="stat-card">
-        <span class="stat-number">Fast</span>
-        <span class="stat-label">GPU Training</span>
+        <span class="stat-number">4</span>
+        <span class="stat-label">Responsive Breakpoints</span>
       </div>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-puzzle-piece"></i> Key Features</h3>
+      <h3><i class="fas fa-star"></i> Key Features</h3>
       <ul style="line-height: 2; color: var(--text-secondary);">
-        <li><i class="fas fa-layer-group" style="color: var(--primary);"></i> <strong>Custom CNN Architecture:</strong> Designed a sequential model with multiple Convolutional, Pooling, and Dense layers.</li>
-        <li><i class="fas fa-images" style="color: var(--primary);"></i> <strong>Data Augmentation:</strong> Implemented techniques like rotation, zoom, and horizontal flips to increase dataset diversity and prevent overfitting.</li>
-        <li><i class="fas fa-chart-line" style="color: var(--primary);"></i> <strong>Visualization:</strong> Plotted training history (accuracy/loss curves) and confusion matrices to analyze model behavior.</li>
-        <li><i class="fas fa-tachometer-alt" style="color: var(--primary);"></i> <strong>Performance Optimization:</strong> Used Dropout layers and Batch Normalization to improve training stability and generalization.</li>
-        <li><i class="fas fa-save" style="color: var(--primary);"></i> <strong>Model Saving:</strong> Implemented callbacks for Model Checkpointing and Early Stopping.</li>
+        <li><i class="fas fa-search" style="color: #667eea;"></i> <strong>Enhanced Search:</strong> Instant city search with recent searches history, popular cities quick access, and smart input with clear functionality.</li>
+        <li><i class="fas fa-temperature-high" style="color: #667eea;"></i> <strong>Real-Time Weather:</strong> Current temperature, humidity, wind speed, pressure, visibility, sunrise/sunset times, and 7-day forecast with daily highs/lows.</li>
+        <li><i class="fas fa-robot" style="color: #667eea;"></i> <strong>AI-Powered Insights:</strong> Comfort Score (0–100), go-outside advice, umbrella recommendations, travel-readiness checks, outfit planner, and UV protection tips.</li>
+        <li><i class="fas fa-map" style="color: #667eea;"></i> <strong>Multiple Views:</strong> Weather dashboard, Cities comparison, interactive Map, Trends analysis, and Settings views with sidebar navigation.</li>
+        <li><i class="fas fa-comments" style="color: #667eea;"></i> <strong>AI Assistant Chat:</strong> Interactive chat interface for weather queries with context-aware responses and smart recommendations.</li>
+        <li><i class="fas fa-mobile-alt" style="color: #667eea;"></i> <strong>Responsive Design:</strong> Fully responsive across 4 breakpoints (1100px, 900px, 640px, 480px) with touch-optimized controls and glass-morphism UI.</li>
       </ul>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-toolbox"></i> Technologies & Stack</h3>
+      <h3><i class="fas fa-code-branch"></i> Technologies & Stack</h3>
       <div class="tech-badges">
+        <span class="badge">React 18</span>
+        <span class="badge">JavaScript (ES6+)</span>
+        <span class="badge">CSS3</span>
+        <span class="badge">OpenWeather API</span>
+        <span class="badge">React Icons</span>
         <span class="badge">Python</span>
-        <span class="badge">TensorFlow</span>
-        <span class="badge">Keras</span>
+        <span class="badge">FastAPI</span>
+        <span class="badge">Scikit-learn</span>
         <span class="badge">NumPy</span>
-        <span class="badge">Matplotlib</span>
-        <span class="badge">OpenCV</span>
-        <span class="badge">Jupyter Notebooks</span>
+        <span class="badge">Pandas</span>
       </div>
     </div>
 
     <div class="content-section">
-      <h3><i class="fas fa-code"></i> Technical Highlights</h3>
+      <h3><i class="fas fa-cogs"></i> Technical Highlights</h3>
       <ul style="line-height: 2; color: var(--text-secondary);">
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Architecture Tuning:</strong> Experimented with kernel sizes, stride lengths, and activation functions (ReLU, Softmax).</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Regularization:</strong> Applied L2 regularization and Dropout to mitigate overfitting on training data.</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Optimizer Selection:</strong> Compared Adam, SGD, and RMSprop optimizers to find the fastest convergence.</li>
-        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Evaluation:</strong> Detailed classification report including precision, recall, and F1-score for each class.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>AI Decision Engine:</strong> Rule-based scoring pipeline that rates temperature, humidity, wind, visibility, and rain probability into a weighted Comfort Score (0–100).</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Service Layer Architecture:</strong> 5 service modules (weatherApi, aiEngine, aiAssistant, mlAdapter, trendAnalyzer) cleanly separated from UI components.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Custom React Hooks:</strong> useWeather hook encapsulates data fetching, caching, AI insights generation, and component-service integration.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>ML Backend (Optional):</strong> Python FastAPI server with scikit-learn model training, testing, and prediction endpoints for enhanced weather analysis.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Mobile-First CSS:</strong> 2,873 lines of modular CSS with CSS variables, glass-morphism effects, smooth animations, and 4 responsive breakpoints.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Component Architecture:</strong> 12 modular React components following Container/Presentation pattern with props-based data flow.</li>
       </ul>
     </div>
 
     <div class="highlight-box">
-      <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Outcome</h3>
+      <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-award"></i> Project Outcome</h3>
       <p>
-        The developed CNN model achieved exceptional accuracy of 99.2% on the MNIST test set and a competitive 88% on CIFAR-10. The implementation of data augmentation successfully reduced the gap between training and validation accuracy. This project solidified understanding of deep learning fundamentals and practical implementation of neural networks using modern frameworks.
+        SkyMap AI delivers a production-ready weather intelligence platform with 12 React components, 5 service modules, 
+        and an optional ML backend. The AI engine provides real-time comfort scoring, outfit recommendations, and travel-readiness 
+        assessments based on multiple weather parameters. The app is fully responsive across all device sizes with a modern 
+        glass-morphism UI, sidebar navigation, and 5 distinct views. The modular architecture allows easy extension — the AI 
+        engine can be upgraded from rule-based to ML-powered by swapping the service layer without changing any UI components.
       </p>
     </div>
   </div>
