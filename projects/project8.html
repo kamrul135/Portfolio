@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio Website — AI Project Details</title>
+  <link rel="stylesheet" href="../premium-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .project-header {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .back-link:hover {
+      color: var(--primary);
+      transform: translateX(-4px);
+    }
+    .project-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .project-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      color: var(--text-secondary);
+    }
+    .project-meta span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .badge {
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .content-section {
+      margin: 48px 0;
+    }
+    .content-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+    .highlight-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid var(--success);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="project-header">
+      <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <h1 class="project-title"><i class="fas fa-briefcase"></i> Portfolio Website</h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+        Responsive portfolio website with modern animations, dark mode, and interactive components. 
+        Built with pure HTML, CSS, and JavaScript showcasing clean code, performance optimization, 
+        and contemporary web design principles.
+      </p>
+
+      <div class="project-meta">
+        <span><i class="fas fa-calendar-alt"></i> Duration: 2 weeks</span>
+        <span><i class="fas fa-paint-brush"></i> Domain: Frontend & Design</span>
+        <span><i class="fas fa-laptop-code"></i> Type: Personal Website</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-bullseye"></i> Project Overview</h3>
+      <p>
+        Created a modern, professional portfolio website to showcase skills, projects, and professional experience. 
+        The website features a clean, minimalist design with smooth animations, custom cursor effects, and an 
+        elegant dark theme. Built without frameworks to demonstrate mastery of core web technologies, the site 
+        includes interactive sections for projects, skills, experience, and contact information. The responsive 
+        design ensures perfect rendering across all devices from mobile phones to large desktop displays.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Lighthouse Score</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">0.8s</span>
+        <span class="stat-label">Load Time</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">8</span>
+        <span class="stat-label">Interactive Sections</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Responsive</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-puzzle-piece"></i> Key Features</h3>
+      <ul style="line-height: 2; color: var(--text-secondary);">
+        <li><i class="fas fa-moon" style="color: var(--primary);"></i> <strong>Dark Mode:</strong> Elegant dark theme with carefully chosen colors for optimal readability and visual appeal.</li>
+        <li><i class="fas fa-magic" style="color: var(--primary);"></i> <strong>Smooth Animations:</strong> CSS and JavaScript animations including scroll effects, fades, and transitions.</li>
+        <li><i class="fas fa-mouse-pointer" style="color: var(--primary);"></i> <strong>Custom Cursor:</strong> Interactive custom cursor with hover effects and animations.</li>
+        <li><i class="fas fa-mobile-alt" style="color: var(--primary);"></i> <strong>Fully Responsive:</strong> Mobile-first design that adapts perfectly to all screen sizes.</li>
+        <li><i class="fas fa-envelope" style="color: var(--primary);"></i> <strong>Contact Form:</strong> Functional contact form with validation and email integration.</li>
+        <li><i class="fas fa-tachometer-alt" style="color: var(--primary);"></i> <strong>Performance Optimized:</strong> Lazy loading, minified assets, and optimized images for fast loading.</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-toolbox"></i> Technologies & Stack</h3>
+      <div class="tech-badges">
+        <span class="badge">HTML5</span>
+        <span class="badge">CSS3</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">GSAP</span>
+        <span class="badge">Intersection Observer</span>
+        <span class="badge">CSS Grid</span>
+        <span class="badge">Flexbox</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-code"></i> Technical Highlights</h3>
+      <ul style="line-height: 2; color: var(--text-secondary);">
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Semantic HTML:</strong> Clean, accessible HTML5 structure with proper semantic elements and ARIA labels.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Advanced CSS:</strong> Custom properties, Grid, Flexbox, animations, and responsive layouts.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Vanilla JavaScript:</strong> Custom scripts for interactivity without framework dependencies.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Scroll Animations:</strong> Intersection Observer API for performant scroll-triggered animations.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>SEO Optimized:</strong> Meta tags, Open Graph, structured data, and sitemap for search visibility.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Cross-Browser:</strong> Tested and compatible with all modern browsers including fallbacks.</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Outcome</h3>
+      <p>
+        Successfully launched a high-performance portfolio website achieving perfect 100/100 Lighthouse scores across 
+        all categories (Performance, Accessibility, Best Practices, SEO). The site loads in under 1 second and provides 
+        an engaging user experience with smooth animations and interactions. The clean, professional design effectively 
+        showcases work and skills while demonstrating mastery of core web technologies without relying on frameworks. 
+        The project is hosted on GitHub Pages with custom domain integration.
+      </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

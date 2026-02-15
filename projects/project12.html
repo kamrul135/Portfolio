@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rock Paper Scissors — AI Project Details</title>
+  <link rel="stylesheet" href="../premium-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .project-header {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .back-link:hover {
+      color: var(--primary);
+      transform: translateX(-4px);
+    }
+    .project-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .project-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      color: var(--text-secondary);
+    }
+    .project-meta span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .badge {
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .content-section {
+      margin: 48px 0;
+    }
+    .content-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+    .highlight-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid var(--success);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="project-header">
+      <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <h1 class="project-title"><i class="fas fa-hand-rock"></i> Rock Paper Scissors</h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+        Java-based Rock-Paper-Scissors game with interactive GUI, animated feedback, score tracking, and clean game logic. 
+        Features include player vs computer gameplay, random AI moves, visual result displays, and comprehensive 
+        game statistics tracking.
+      </p>
+
+      <div class="project-meta">
+        <span><i class="fas fa-calendar-alt"></i> Duration: 1 week</span>
+        <span><i class="fas fa-gamepad"></i> Domain: Game Development</span>
+        <span><i class="fas fa-coffee"></i> Type: Java GUI Game</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-bullseye"></i> Project Overview</h3>
+      <p>
+        Developed a classic Rock-Paper-Scissors game with a modern graphical interface using Java Swing. The game allows 
+        players to compete against the computer in this timeless hand game. Players select their choice (rock, paper, or 
+        scissors) using intuitive button controls, and the computer generates its move randomly. The game then determines 
+        the winner based on classic rules and displays the result with animated feedback. The interface includes score 
+        tracking, round counting, and visual representations of both player and computer choices. The clean code structure 
+        demonstrates proper object-oriented programming principles with separate classes for game logic and GUI components.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Game Choices</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">Real-time</span>
+        <span class="stat-label">Score Tracking</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">Random</span>
+        <span class="stat-label">AI Opponent</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">Visual</span>
+        <span class="stat-label">Feedback</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-puzzle-piece"></i> Key Features</h3>
+      <ul style="line-height: 2; color: var(--text-secondary);">
+        <li><i class="fas fa-hand-rock" style="color: var(--primary);"></i> <strong>Classic Gameplay:</strong> Traditional rock-paper-scissors rules with instant win/loss/tie determination.</li>
+        <li><i class="fas fa-robot" style="color: var(--primary);"></i> <strong>AI Opponent:</strong> Computer makes random choices ensuring fair and unpredictable gameplay.</li>
+        <li><i class="fas fa-trophy" style="color: var(--primary);"></i> <strong>Score Tracking:</strong> Real-time display of wins, losses, and ties for both player and computer.</li>
+        <li><i class="fas fa-eye" style="color: var(--primary);"></i> <strong>Visual Feedback:</strong> Clear display of player and computer choices with result animations.</li>
+        <li><i class="fas fa-redo" style="color: var(--primary);"></i> <strong>Reset Function:</strong> Quick reset button to clear scores and start fresh games.</li>
+        <li><i class="fas fa-desktop" style="color: var(--primary);"></i> <strong>Clean Interface:</strong> Intuitive button layout with clear labels and responsive design.</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-toolbox"></i> Technologies & Stack</h3>
+      <div class="tech-badges">
+        <span class="badge">Java</span>
+        <span class="badge">Swing GUI</span>
+        <span class="badge">Random Class</span>
+        <span class="badge">JButton</span>
+        <span class="badge">JLabel</span>
+        <span class="badge">Event Handling</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-code"></i> Technical Highlights</h3>
+      <ul style="line-height: 2; color: var(--text-secondary);">
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Game Logic:</strong> Clean implementation of rock-paper-scissors rules with conditional statements.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Random Generation:</strong> Java Random class for unpredictable computer move selection.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Swing Components:</strong> JFrame, JPanel, JButton, and JLabel for interactive game interface.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Event Listeners:</strong> ActionListener implementation for button clicks and game interactions.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>State Management:</strong> Tracking game state, scores, and round history throughout gameplay.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>OOP Principles:</strong> Proper class structure separating UI, game logic, and data management.</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Outcome</h3>
+      <p>
+        Successfully created an entertaining and fully functional Rock-Paper-Scissors game with an intuitive graphical 
+        interface. The game provides a smooth playing experience with instant feedback, accurate scoring, and fair random 
+        AI opponent moves. Players can enjoy unlimited rounds with persistent score tracking and easy game reset options. 
+        The project demonstrates proficiency in Java game development, GUI design with Swing, implementing game logic, and 
+        creating interactive desktop applications with proper event handling and user feedback mechanisms.
+      </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

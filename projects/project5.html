@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sentiment Analysis Tool — AI Project Details</title>
+  <link rel="stylesheet" href="../premium-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .project-header {
+      padding: 60px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .back-link:hover {
+      color: var(--primary);
+      transform: translateX(-4px);
+    }
+    .project-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff, var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .project-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      color: var(--text-secondary);
+    }
+    .project-meta span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .badge {
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .content-section {
+      margin: 48px 0;
+    }
+    .content-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+    .highlight-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid var(--success);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="project-header">
+      <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+      <h1 class="project-title"><i class="fas fa-brain"></i> Sentiment Analysis Tool</h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+        Advanced Natural Language Processing model for sentiment analysis using BERT and Transformers. 
+        Analyzes customer reviews, social media posts, and feedback to extract sentiment polarity and emotions 
+        with state-of-the-art accuracy.
+      </p>
+
+      <div class="project-meta">
+        <span><i class="fas fa-calendar-alt"></i> Duration: 5 weeks</span>
+        <span><i class="fas fa-brain"></i> Domain: NLP & Deep Learning</span>
+        <span><i class="fas fa-robot"></i> Type: AI/ML Application</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-bullseye"></i> Project Overview</h3>
+      <p>
+        Developed a sophisticated sentiment analysis tool leveraging transformer-based BERT architecture to classify 
+        text sentiment with high accuracy. The model was fine-tuned on large datasets of customer reviews and social 
+        media content, enabling it to understand context, sarcasm, and nuanced expressions. The tool provides not only 
+        sentiment polarity (positive, negative, neutral) but also emotion detection and confidence scores, making it 
+        valuable for business intelligence and customer feedback analysis.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-number">94%</span>
+        <span class="stat-label">Model Accuracy</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">50K+</span>
+        <span class="stat-label">Training Samples</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">5</span>
+        <span class="stat-label">Emotion Categories</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">0.2s</span>
+        <span class="stat-label">Inference Time</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-puzzle-piece"></i> Key Features</h3>
+      <ul style="line-height: 2; color: var(--text-secondary);">
+        <li><i class="fas fa-brain" style="color: var(--primary);"></i> <strong>BERT Architecture:</strong> State-of-the-art transformer model for understanding contextual relationships in text.</li>
+        <li><i class="fas fa-smile" style="color: var(--primary);"></i> <strong>Emotion Detection:</strong> Identifies joy, sadness, anger, fear, and surprise beyond basic sentiment polarity.</li>
+        <li><i class="fas fa-chart-pie" style="color: var(--primary);"></i> <strong>Confidence Scores:</strong> Provides probability distributions for model predictions with transparency.</li>
+        <li><i class="fas fa-language" style="color: var(--primary);"></i> <strong>Multi-Language Support:</strong> Fine-tuned for English with expandable support for other languages.</li>
+        <li><i class="fas fa-tachometer-alt" style="color: var(--primary);"></i> <strong>Fast Inference:</strong> Optimized for real-time predictions with sub-second response times.</li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-toolbox"></i> Technologies & Stack</h3>
+      <div class="tech-badges">
+        <span class="badge">Python</span>
+        <span class="badge">PyTorch</span>
+        <span class="badge">Transformers</span>
+        <span class="badge">BERT</span>
+        <span class="badge">HuggingFace</span>
+        <span class="badge">scikit-learn</span>
+        <span class="badge">NLTK</span>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h3><i class="fas fa-code"></i> Technical Highlights</h3>
+      <ul style="line-height: 2; color: var(--text-secondary);">
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Transfer Learning:</strong> Fine-tuned pre-trained BERT model on domain-specific datasets for improved accuracy.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Data Preprocessing:</strong> Advanced text cleaning, tokenization, and normalization using NLTK and spaCy.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Model Optimization:</strong> Quantization and pruning techniques to reduce model size and improve inference speed.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>Evaluation Metrics:</strong> Comprehensive assessment using F1-score, precision, recall, and confusion matrices.</li>
+        <li><i class="fas fa-check" style="color: var(--success);"></i> <strong>API Development:</strong> RESTful API built with Flask for easy integration into production systems.</li>
+      </ul>
+    </div>
+
+    <div class="highlight-box">
+      <h3 style="color: var(--success); margin-bottom: 12px;"><i class="fas fa-trophy"></i> Project Outcome</h3>
+      <p>
+        The sentiment analysis tool achieved 94% accuracy on test datasets, significantly outperforming traditional 
+        ML approaches. The model successfully handles complex linguistic patterns including sarcasm, negation, and 
+        context-dependent meanings. Deployed as a microservice, it processes customer feedback in real-time, providing 
+        actionable insights for business decision-making. This project showcases expertise in deep learning, NLP, and 
+        production-ready AI system development.
+      </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Md Kamrul Hasan — AI Engineer</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
