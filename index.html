@@ -36,9 +36,6 @@
         </div>
     </div>
 
-    <!-- Cursor -->
-    <div class="cursor-dot" data-cursor-dot></div>
-    <div class="cursor-outline" data-cursor-outline></div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -88,6 +85,10 @@
             </div>
             
             <div class="nav-actions">
+                <a href="skills.html" class="btn-resume" style="display: none;">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Skills</span>
+                </a>
                 <a href="resume.html" class="btn-resume">
                     <i class="fas fa-file-alt"></i>
                     <span>Resume</span>
@@ -301,207 +302,430 @@
             <div class="section-header">
                 <span class="section-tag">What I Know</span>
                 <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Tools and technologies I work with</p>
+                <p class="section-subtitle">Explore my technical expertise across different domains</p>
             </div>
             
-            <div class="skills-grid">
-                <!-- Programming Languages -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Programming Languages</h3>
+            <!-- Skills Overview Cards -->
+            <div class="skills-overview">
+                <div class="overview-card" data-skill-modal="languages">
+                    <div class="overview-icon">
+                        <i class="fas fa-code"></i>
                     </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-js"></i></div>
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-java"></i></div>
-                            <div class="skill-info">
-                                <span class="skill-name">Java / C++</span>
-                                <span class="skill-level">70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Programming Languages</h3>
+                    <p>Python, JavaScript, TypeScript, Java, C</p>
+                    <span class="skill-count">10+ Languages</span>
                 </div>
                 
-                <!-- Data Structures & Algorithms -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-sitemap"></i>
-                        </div>
-                        <h3>Data Structures & Algorithms</h3>
+                <div class="overview-card" data-skill-modal="frameworks">
+                    <div class="overview-icon">
+                        <i class="fas fa-layer-group"></i>
                     </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag dsa">Arrays & Strings</span>
-                        <span class="tech-tag dsa">Linked Lists</span>
-                        <span class="tech-tag dsa">Trees & Graphs</span>
-                        <span class="tech-tag dsa">Hash Tables</span>
-                        <span class="tech-tag dsa">Sorting & Searching</span>
-                        <span class="tech-tag dsa">Dynamic Programming</span>
-                        <span class="tech-tag dsa">Recursion</span>
-                        <span class="tech-tag dsa">Time Complexity</span>
-                    </div>
+                    <h3>Frameworks & Web</h3>
+                    <p>Next.js, React, Node.js, Flask, Tailwind</p>
+                    <span class="skill-count">15+ Technologies</span>
                 </div>
                 
-                <!-- Web Development -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Web Development</h3>
+                <div class="overview-card" data-skill-modal="aiml">
+                    <div class="overview-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="tech-tag"><i class="fab fa-react"></i> React.js</span>
-                        <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
-                        <span class="tech-tag"><i class="fas fa-flask"></i> Flask</span>
-                        <span class="tech-tag"><i class="fas fa-server"></i> REST APIs</span>
-                    </div>
+                    <h3>AI/ML & Data Science</h3>
+                    <p>TensorFlow, PyTorch, Scikit-learn, Pandas</p>
+                    <span class="skill-count">8+ Tools</span>
                 </div>
                 
-                <!-- Machine Learning -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Machine Learning</h3>
+                <div class="overview-card" data-skill-modal="databases">
+                    <div class="overview-icon">
+                        <i class="fas fa-database"></i>
                     </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag ml">Scikit-learn</span>
-                        <span class="tech-tag ml">Regression</span>
-                        <span class="tech-tag ml">Classification</span>
-                        <span class="tech-tag ml">Clustering</span>
-                        <span class="tech-tag ml">Data Preprocessing</span>
-                        <span class="tech-tag ml">Model Evaluation</span>
-                    </div>
-                </div>
-                
-                <!-- Deep Learning -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <h3>Deep Learning <span class="badge-learning">Learning</span></h3>
-                    </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag dl">TensorFlow</span>
-                        <span class="tech-tag dl">Keras</span>
-                        <span class="tech-tag dl">PyTorch Basics</span>
-                        <span class="tech-tag dl">CNN</span>
-                        <span class="tech-tag dl">MNIST / CIFAR-10</span>
-                    </div>
-                </div>
-                
-                <!-- Databases -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3>Databases</h3>
-                    </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag db">MySQL</span>
-                        <span class="tech-tag db">PostgreSQL</span>
-                        <span class="tech-tag db">MongoDB</span>
-                    </div>
-                </div>
-                
-                <!-- Data & Visualization -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Data & Visualization</h3>
-                    </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag data">Pandas</span>
-                        <span class="tech-tag data">NumPy</span>
-                        <span class="tech-tag data">Matplotlib</span>
-                        <span class="tech-tag data">Seaborn</span>
-                        <span class="tech-tag data">Plotly</span>
-                    </div>
-                </div>
-                
-                <!-- Tools & Deployment -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <h3>Tools & Deployment</h3>
-                    </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag tool"><i class="fab fa-git-alt"></i> Git</span>
-                        <span class="tech-tag tool"><i class="fab fa-github"></i> GitHub</span>
-                        <span class="tech-tag tool"><i class="fab fa-docker"></i> Docker</span>
-                        <span class="tech-tag tool">Heroku</span>
-                        <span class="tech-tag tool">Render</span>
-                        <span class="tech-tag tool">HuggingFace</span>
-                    </div>
-                </div>
-                
-                <!-- Soft Skills -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <div class="category-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Soft Skills</h3>
-                    </div>
-                    <div class="soft-skills">
-                        <div class="soft-skill">
-                            <i class="fas fa-puzzle-piece"></i>
-                            <span>Problem Solving</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-book-open"></i>
-                            <span>Fast Learner</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-users"></i>
-                            <span>Team Work</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Documentation</span>
-                        </div>
-                    </div>
+                    <h3>Databases & Cloud</h3>
+                    <p>PostgreSQL, MongoDB, Prisma, Vercel</p>
+                    <span class="skill-count">12+ Platforms</span>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Skill Modals -->
+    <!-- Programming Languages Modal -->
+    <div class="skill-modal" id="languagesModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <h2><i class="fas fa-code"></i> Programming Languages</h2>
+                <button class="modal-close-btn" onclick="closeSkillModal('languagesModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-skills-content">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-code"></i> TypeScript</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-copyright"></i> C</span>
+                        <span class="skill-percentage">78%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 78%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-percentage">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Frameworks & Web Modal -->
+    <div class="skill-modal" id="frameworksModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <h2><i class="fas fa-layer-group"></i> Frameworks & Web Technologies</h2>
+                <button class="modal-close-btn" onclick="closeSkillModal('frameworksModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-skills-content">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-rocket"></i> Next.js 16</span>
+                        <span class="skill-percentage">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-react"></i> React.js</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-flask"></i> Flask</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-fire"></i> FastAPI</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI/ML & Data Science Modal -->
+    <div class="skill-modal" id="aimlModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <h2><i class="fas fa-brain"></i> AI/ML & Data Science</h2>
+                <button class="modal-close-btn" onclick="closeSkillModal('aimlModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-skills-content">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-brain"></i> TensorFlow</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-fire-alt"></i> PyTorch</span>
+                        <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-robot"></i> Scikit-learn</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-table"></i> Pandas</span>
+                        <span class="skill-percentage">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-square-root-alt"></i> NumPy</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-layer-group"></i> Keras</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-chart-line"></i> Matplotlib</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-chart-area"></i> Seaborn</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Databases & Cloud Modal -->
+    <div class="skill-modal" id="databasesModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <h2><i class="fas fa-database"></i> Databases & Cloud</h2>
+                <button class="modal-close-btn" onclick="closeSkillModal('databasesModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-skills-content">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-elephant"></i> PostgreSQL</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-leaf"></i> MongoDB</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-database"></i> Prisma ORM</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-percentage">82%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 82%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-cloud"></i> Vercel</span>
+                        <span class="skill-percentage">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 92%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fas fa-server"></i> Neon PostgreSQL</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name"><i class="fab fa-git-alt"></i> Git & GitHub</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
@@ -1095,6 +1319,56 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && projectsModal.classList.contains('active')) {
                 closeModal();
+            }
+        });
+
+        // Skills Modal functionality
+        const skillCards = document.querySelectorAll('.overview-card[data-skill-modal]');
+        
+        // Add click event to each skill card
+        skillCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const modalId = card.getAttribute('data-skill-modal') + 'Modal';
+                openSkillModal(modalId);
+            });
+        });
+        
+        // Open skill modal
+        function openSkillModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Close skill modal
+        function closeSkillModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Close on backdrop click
+        document.querySelectorAll('.skill-modal .modal-backdrop').forEach(backdrop => {
+            backdrop.addEventListener('click', (e) => {
+                const modal = e.target.closest('.skill-modal');
+                if (modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Close on ESC key for skill modals
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.skill-modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
             }
         });
     </script>

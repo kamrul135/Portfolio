@@ -1,7 +1,3 @@
-// ==================== CUSTOM CURSOR ====================
-const cursorDot = document.querySelector('[data-cursor-dot]');
-const cursorOutline = document.querySelector('[data-cursor-outline]');
-
 // ==================== PAGE LOADER ====================
 window.addEventListener('load', () => {
     const loader = document.querySelector('.page-loader');
@@ -27,38 +23,6 @@ window.addEventListener('scroll', () => {
     // Update progress bar width
     progressBar.style.width = scrollPercent + '%';
 });
-
-if (cursorDot && cursorOutline && window.innerWidth > 768) {
-    window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-        
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-        
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-    
-    // Cursor effects on interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .project-card, input, textarea');
-    
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            cursorOutline.style.width = '60px';
-            cursorOutline.style.height = '60px';
-        });
-        
-        el.addEventListener('mouseleave', () => {
-            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursorOutline.style.width = '40px';
-            cursorOutline.style.height = '40px';
-        });
-    });
-}
 
 // ==================== NAVBAR ====================
 const navbar = document.getElementById('navbar');
@@ -578,3 +542,291 @@ textElements.forEach((el, index) => {
         el.style.transform = 'translateY(0)';
     }, 300 + (index * 100));
 });
+
+// ==================== ADVANCED SKILLS SECTION ====================
+
+// Skill Level Counter Animation
+function animateCounter(element, target) {
+    const duration = 1500;
+    const start = 0;
+    const startTime = performance.now();
+    
+    function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(start + (target - start) * easeOutQuart);
+        
+        element.textContent = current + '%';
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+        }
+    }
+    
+    requestAnimationFrame(updateCounter);
+}
+
+// Skill Bar Animation with Counter
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const skillItem = entry.target;
+            const skillFill = skillItem.querySelector('.skill-fill');
+            const skillLevel = skillItem.querySelector('.skill-level');
+            const skillGlow = skillItem.querySelector('.skill-glow');
+            
+            if (skillFill && skillLevel) {
+                const targetWidth = skillFill.getAttribute('data-width') || 0;
+                const targetLevel = skillLevel.getAttribute('data-level') || 0;
+                
+                // Animate counter
+                setTimeout(() => {
+                    animateCounter(skillLevel, parseInt(targetLevel));
+                }, 200);
+                
+                // Animate progress bar
+                setTimeout(() => {
+                    skillFill.style.width = targetWidth + '%';
+                    
+                    // Animate glow to follow the bar
+                    if (skillGlow) {
+                        skillGlow.style.setProperty('--glow-position', targetWidth + '%');
+                    }
+                }, 300);
+            }
+            
+            skillObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+// Observe skill items
+document.querySelectorAll('.skill-item[data-skill]').forEach(item => {
+    skillObserver.observe(item);
+});
+
+// Circular Progress Ring Animation
+const circularObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const circle = entry.target.querySelector('.progress-ring-circle');
+            const percentText = entry.target.querySelector('.circular-percent');
+            
+            if (circle && percentText) {
+                const progress = parseInt(circle.getAttribute('data-progress'));
+                const circumference = 2 * Math.PI * 52; // r = 52
+                const offset = circumference - (progress / 100) * circumference;
+                
+                // Animate circle
+                setTimeout(() => {
+                    circle.style.strokeDashoffset = offset;
+                }, 400);
+                
+                // Animate counter
+                setTimeout(() => {
+                    animateCounter(percentText, progress);
+                }, 500);
+            }
+            
+            circularObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observe circular skills
+document.querySelectorAll('.circular-skill').forEach(skill => {
+    circularObserver.observe(skill);
+});
+
+// Tech Card Level Bar Animation
+const techCardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const techCard = entry.target;
+            const levelBar = techCard.querySelector('.tech-level-bar');
+            
+            if (levelBar) {
+                const level = levelBar.getAttribute('data-level') || 80;
+                levelBar.style.setProperty('--tech-level', level + '%');
+            }
+            
+            techCardObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+// Observe tech cards
+document.querySelectorAll('.tech-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        const levelBar = this.querySelector('.tech-level-bar');
+        if (levelBar) {
+            const level = levelBar.getAttribute('data-level') || 80;
+            levelBar.style.setProperty('--tech-level', level + '%');
+        }
+    });
+    techCardObserver.observe(card);
+});
+
+// Skill Filters
+const filterButtons = document.querySelectorAll('.filter-btn');
+const skillCategories = document.querySelectorAll('.skill-category');
+
+if (filterButtons.length > 0) {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Filter categories
+            skillCategories.forEach((category, index) => {
+                const categoryType = category.getAttribute('data-category');
+                
+                if (filter === 'all' || categoryType === filter) {
+                    category.style.display = 'block';
+                    setTimeout(() => {
+                        category.style.opacity = '1';
+                        category.style.transform = 'translateY(0) scale(1)';
+                    }, index * 50);
+                } else {
+                    category.style.opacity = '0';
+                    category.style.transform = 'translateY(20px) scale(0.95)';
+                    setTimeout(() => {
+                        category.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+// Enhanced Tooltip Interaction
+document.querySelectorAll('.skill-item').forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        const tooltip = this.querySelector('.skill-tooltip');
+        if (tooltip) {
+            tooltip.style.pointerEvents = 'auto';
+        }
+    });
+    
+    item.addEventListener('mouseleave', function() {
+        const tooltip = this.querySelector('.skill-tooltip');
+        if (tooltip) {
+            tooltip.style.pointerEvents = 'none';
+        }
+    });
+});
+
+// Add SVG gradient for circular progress
+function addSVGGradient() {
+    const svgs = document.querySelectorAll('.progress-ring');
+    svgs.forEach(svg => {
+        const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        const gradient = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+        gradient.setAttribute('id', 'gradient');
+        gradient.setAttribute('x1', '0%');
+        gradient.setAttribute('y1', '0%');
+        gradient.setAttribute('x2', '100%');
+        gradient.setAttribute('y2', '100%');
+        
+        const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+        stop1.setAttribute('offset', '0%');
+        stop1.setAttribute('style', 'stop-color:#6366f1;stop-opacity:1');
+        
+        const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+        stop2.setAttribute('offset', '50%');
+        stop2.setAttribute('style', 'stop-color:#ec4899;stop-opacity:1');
+        
+        const stop3 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+        stop3.setAttribute('offset', '100%');
+        stop3.setAttribute('style', 'stop-color:#14b8a6;stop-opacity:1');
+        
+        gradient.appendChild(stop1);
+        gradient.appendChild(stop2);
+        gradient.appendChild(stop3);
+        defs.appendChild(gradient);
+        svg.insertBefore(defs, svg.firstChild);
+    });
+}
+
+// Initialize SVG gradients
+if (document.querySelector('.progress-ring')) {
+    addSVGGradient();
+}
+
+// Particle effect for skill category icons
+function createParticle(container) {
+    const particle = document.createElement('div');
+    particle.className = 'skill-particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    particle.style.animationDuration = (Math.random() * 2 + 1) + 's';
+    container.appendChild(particle);
+    
+    setTimeout(() => particle.remove(), 3000);
+}
+
+document.querySelectorAll('.skill-category').forEach(category => {
+    category.addEventListener('mouseenter', function() {
+        const particleContainer = this.querySelector('.icon-particles-skill');
+        if (particleContainer) {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => createParticle(particleContainer), i * 100);
+            }
+        }
+    });
+});
+
+// Add dynamic CSS for particles
+const style = document.createElement('style');
+style.textContent = `
+    .skill-particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.8), transparent);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: particleFloat 2s ease-out forwards;
+    }
+    
+    @keyframes particleFloat {
+        0% {
+            transform: translate(0, 0) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(var(--x, 20px), var(--y, -30px)) scale(0);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Skill category stagger animation on scroll
+const categoryObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                entry.target.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
+            
+            categoryObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+skillCategories.forEach(category => {
+    categoryObserver.observe(category);
+});
+
+console.log('Advanced Skills Section Initialized ✨');
