@@ -1,14 +1,3 @@
-// ==================== PAGE LOADER ====================
-window.addEventListener('load', () => {
-    const loader = document.querySelector('.page-loader');
-    setTimeout(() => {
-        loader.classList.add('fade-out');
-        setTimeout(() => {
-            loader.style.display = 'none';
-        }, 500);
-    }, 1000); // Show loader for at least 1 second
-});
-
 // ==================== SCROLL PROGRESS INDICATOR ====================
 const progressBar = document.getElementById('progressBar');
 
@@ -830,3 +819,27 @@ skillCategories.forEach(category => {
 });
 
 console.log('Advanced Skills Section Initialized ✨');
+
+// ==================== SKILL BAR SCROLL ANIMATION ====================
+(function () {
+    const bars = document.querySelectorAll('.sk-bar');
+    if (!bars.length) return;
+
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const pct = bar.style.getPropertyValue('--pct') || '0%';
+                // Small delay per sibling index for stagger
+                const idx = [...bar.closest('.learning-items').querySelectorAll('.sk-bar')]
+                    .indexOf(bar);
+                setTimeout(() => {
+                    bar.style.width = pct;
+                }, idx * 140);
+                obs.unobserve(bar);
+            }
+        });
+    }, { threshold: 0.35 });
+
+    bars.forEach(bar => obs.observe(bar));
+})();

@@ -3,17 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Kamrul Hasan | AI Engineer Portfolio</title>
-    <meta name="description" content="Aspiring AI/ML Engineer specializing in Full Stack Development, Machine Learning, and Deep Learning">
-    
+
+    <!-- Primary SEO -->
+    <title>Md Kamrul Hasan | AI Engineer &amp; Full Stack Developer</title>
+    <meta name="description" content="Md Kamrul Hasan — AI/ML Engineer &amp; Full Stack Developer specializing in Machine Learning, Deep Learning, React, Next.js and Python. Building intelligent real-world applications.">
+    <meta name="keywords" content="AI Engineer, ML Engineer, Full Stack Developer, Machine Learning, Deep Learning, Python, React, Next.js, TypeScript, Portfolio, Kamrul Hasan">
+    <meta name="author" content="Md Kamrul Hasan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kamrulhasan.dev/">
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kamrulhasan.dev/">
+    <meta property="og:title" content="Md Kamrul Hasan | AI Engineer &amp; Full Stack Developer">
+    <meta property="og:description" content="AI/ML Engineer building intelligent full-stack applications. Explore my projects in Machine Learning, Deep Learning and Web Development.">
+    <meta property="og:image" content="https://kamrulhasan.dev/images/profile.png">
+    <meta property="og:site_name" content="Kamrul Hasan Portfolio">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Md Kamrul Hasan | AI Engineer &amp; Full Stack Developer">
+    <meta name="twitter:description" content="AI/ML Engineer building intelligent full-stack applications with Python, React &amp; Next.js.">
+    <meta name="twitter:image" content="https://kamrulhasan.dev/images/profile.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Md Kamrul Hasan",
+      "url": "https://kamrulhasan.dev",
+      "image": "https://kamrulhasan.dev/images/profile.png",
+      "jobTitle": "AI Engineer & Full Stack Developer",
+      "description": "AI/ML Engineer specializing in Machine Learning, Deep Learning, and Full Stack Development.",
+      "email": "kamrul@njupt.edu.cn",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Nanjing University of Posts and Telecommunications"
+      },
+      "knowsAbout": ["Machine Learning", "Deep Learning", "Python", "React", "Next.js", "Full Stack Development"],
+      "sameAs": [
+        "https://github.com/kamrulhasan",
+        "https://linkedin.com/in/kamrulhasan"
+      ]
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="premium-style.css">
 </head>
@@ -21,19 +65,6 @@
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress">
         <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <!-- Page Loader -->
-    <div class="page-loader">
-        <div class="loader-content">
-            <div class="loader-icon">
-                <i class="fas fa-robot"></i>
-            </div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
-            <p class="loader-text">Loading Portfolio...</p>
-        </div>
     </div>
 
 
@@ -177,118 +208,212 @@
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="container">
+        <div class="about-blob about-blob-1"></div>
+        <div class="about-blob about-blob-2"></div>
+        <div class="about-grid-overlay"></div>
+
+        <div class="container" style="position:relative;z-index:1;">
             <div class="section-header">
-                <span class="section-tag">Get To Know Me</span>
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">My journey in technology and what drives me</p>
+                <span class="section-tag"><i class="fas fa-user-circle"></i> Get To Know Me</span>
+                <h2 class="section-title">About <span class="title-gradient">Me</span></h2>
+                <p class="section-subtitle">Passionate engineer blending intelligence with innovation</p>
             </div>
-            
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-card">
-                        <h3>🎓 Education & Background</h3>
-                        <p>
-                            I'm currently pursuing <strong>Computer Science & Engineering</strong> at 
-                            <strong>Nanjing University of Posts and Telecommunications (NJUPT)</strong>, 
-                            with a focus on Artificial Intelligence and Machine Learning.
-                        </p>
+
+            <div class="about-hero">
+                <!-- Avatar -->
+                <div class="about-avatar-wrap">
+                    <div class="about-avatar-ring"></div>
+                    <div class="about-avatar-ring ring2"></div>
+                    <div class="about-avatar"><i class="fas fa-user-astronaut"></i></div>
+                    <div class="about-avatar-badge">
+                        <i class="fas fa-circle"></i>
+                        <span>Available for Work</span>
                     </div>
-                    
-                    <div class="about-card">
-                        <h3>💡 Passion & Goals</h3>
-                        <p>
-                            My passion lies in creating intelligent solutions that solve real-world problems. 
-                            I'm actively learning <strong>Deep Learning</strong> and <strong>MLOps</strong>, 
-                            while building projects that bridge theory with practical applications.
-                        </p>
+                    <div class="about-orbit">
+                        <span class="orbit-dot" style="--i:0;"><i class="fab fa-python"></i></span>
+                        <span class="orbit-dot" style="--i:1;"><i class="fab fa-react"></i></span>
+                        <span class="orbit-dot" style="--i:2;"><i class="fas fa-brain"></i></span>
+                        <span class="orbit-dot" style="--i:3;"><i class="fas fa-database"></i></span>
                     </div>
-                    
-                    <div class="about-card">
-                        <h3>🚀 What I Do</h3>
-                        <p>
-                            I specialize in <strong>Full Stack Development</strong> with React and Node.js, 
-                            building <strong>Machine Learning models</strong> with Scikit-learn, and exploring 
-                            <strong>Deep Learning</strong> with TensorFlow and PyTorch. I enjoy the entire 
-                            process from data preprocessing to model deployment.
-                        </p>
+                </div>
+
+                <!-- Intro -->
+                <div class="about-intro">
+                    <h3 class="about-name">Md <span class="name-highlight">Kamrul</span> Hasan</h3>
+                    <p class="about-role">
+                        <span class="role-prefix">&lt;</span>
+                        <span class="typed-role">AI Engineer & Full Stack Developer</span>
+                        <span class="role-prefix">/&gt;</span>
+                    </p>
+                    <p class="about-bio">
+                        CSE student at <strong>NJUPT</strong> obsessed with building intelligent systems — 
+                        from neural networks to full-stack web apps. I bridge cutting-edge AI research 
+                        with real-world impact.
+                    </p>
+
+                    <!-- Info row -->
+                    <div class="about-info-grid">
+                        <div class="info-item" style="--ii-color:#3b82f6">
+                            <div class="info-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><span class="info-label">Location</span><span class="info-value">Nanjing, China</span></div>
+                        </div>
+                        <div class="info-item" style="--ii-color:#8b5cf6">
+                            <div class="info-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+                            <div><span class="info-label">Degree</span><span class="info-value">B.Sc. in CSE</span></div>
+                        </div>
+                        <div class="info-item" style="--ii-color:#ec4899">
+                            <div class="info-icon-wrap"><i class="fas fa-envelope"></i></div>
+                            <div><span class="info-label">Email</span><span class="info-value">kamrul@njupt.edu.cn</span></div>
+                        </div>
+                        <div class="info-item" style="--ii-color:#10b981">
+                            <div class="info-icon-wrap"><i class="fas fa-language"></i></div>
+                            <div><span class="info-label">Languages</span><span class="info-value">EN · BN · ZH</span></div>
+                        </div>
                     </div>
-                    
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Problem-solving mindset</span>
+
+                    <!-- Traits row -->
+                    <div class="about-traits">
+                        <span class="trait-chip" style="--tc:#3b82f6"><i class="fas fa-brain"></i> Problem-solver</span>
+                        <span class="trait-chip" style="--tc:#8b5cf6"><i class="fas fa-sync-alt"></i> Fast learner</span>
+                        <span class="trait-chip" style="--tc:#10b981"><i class="fas fa-users"></i> Team player</span>
+                        <span class="trait-chip" style="--tc:#f59e0b"><i class="fas fa-bolt"></i> Executor</span>
+                        <span class="trait-chip" style="--tc:#ec4899"><i class="fas fa-search"></i> Detail-oriented</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Skill bars + Focus tags in a compact 2-col row -->
+            <div class="about-bottom">
+                <div class="progress-card">
+                    <div class="skill-card-header">
+                        <div class="skill-card-icon"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h4>Skill Proficiency</h4>
+                            <span class="skill-card-sub">Core technical expertise</span>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Continuous learner</span>
+                    </div>
+                    <div class="learning-items">
+                        <div class="learning-item" style="--sk:#3b82f6" data-pct="85">
+                            <div class="learning-header">
+                                <span class="learning-name">
+                                    <span class="sk-icon" style="--sk:#3b82f6"><i class="fab fa-python"></i></span>
+                                    Python &amp; ML
+                                </span>
+                                <div class="sk-meta">
+                                    <span class="sk-badge" style="--sk:#3b82f6">Advanced</span>
+                                    <span class="learning-percent">85%</span>
+                                </div>
+                            </div>
+                            <div class="learning-bar">
+                                <div class="learning-progress sk-bar" style="--pct:85%; --sk:#3b82f6; width:0"></div>
+                            </div>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Team collaboration</span>
+                        <div class="learning-item" style="--sk:#8b5cf6" data-pct="80">
+                            <div class="learning-header">
+                                <span class="learning-name">
+                                    <span class="sk-icon" style="--sk:#8b5cf6"><i class="fas fa-globe"></i></span>
+                                    Web Dev
+                                </span>
+                                <div class="sk-meta">
+                                    <span class="sk-badge" style="--sk:#8b5cf6">Advanced</span>
+                                    <span class="learning-percent">80%</span>
+                                </div>
+                            </div>
+                            <div class="learning-bar">
+                                <div class="learning-progress sk-bar" style="--pct:80%; --sk:#8b5cf6; width:0"></div>
+                            </div>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Detail-oriented</span>
+                        <div class="learning-item" style="--sk:#ec4899" data-pct="65">
+                            <div class="learning-header">
+                                <span class="learning-name">
+                                    <span class="sk-icon" style="--sk:#ec4899"><i class="fas fa-brain"></i></span>
+                                    Deep Learning
+                                </span>
+                                <div class="sk-meta">
+                                    <span class="sk-badge" style="--sk:#ec4899">Intermediate</span>
+                                    <span class="learning-percent">65%</span>
+                                </div>
+                            </div>
+                            <div class="learning-bar">
+                                <div class="learning-progress sk-bar" style="--pct:65%; --sk:#ec4899; width:0"></div>
+                            </div>
+                        </div>
+                        <div class="learning-item" style="--sk:#10b981" data-pct="75">
+                            <div class="learning-header">
+                                <span class="learning-name">
+                                    <span class="sk-icon" style="--sk:#10b981"><i class="fas fa-chart-bar"></i></span>
+                                    Data Science
+                                </span>
+                                <div class="sk-meta">
+                                    <span class="sk-badge" style="--sk:#10b981">Advanced</span>
+                                    <span class="learning-percent">75%</span>
+                                </div>
+                            </div>
+                            <div class="learning-bar">
+                                <div class="learning-progress sk-bar" style="--pct:75%; --sk:#10b981; width:0"></div>
+                            </div>
+                        </div>
+                        <div class="learning-item" style="--sk:#f59e0b" data-pct="60">
+                            <div class="learning-header">
+                                <span class="learning-name">
+                                    <span class="sk-icon" style="--sk:#f59e0b"><i class="fas fa-cloud"></i></span>
+                                    Cloud / MLOps
+                                </span>
+                                <div class="sk-meta">
+                                    <span class="sk-badge" style="--sk:#f59e0b">Learning</span>
+                                    <span class="learning-percent">60%</span>
+                                </div>
+                            </div>
+                            <div class="learning-bar">
+                                <div class="learning-progress sk-bar" style="--pct:60%; --sk:#f59e0b; width:0"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="about-stats">
-                    <div class="progress-card">
-                        <h4>Current Learning Focus</h4>
-                        <div class="learning-items">
-                            <div class="learning-item">
-                                <div class="learning-header">
-                                    <span class="learning-name">Deep Learning</span>
-                                    <span class="learning-percent">Learning</span>
-                                </div>
-                                <div class="learning-bar">
-                                    <div class="learning-progress" style="width: 60%;"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="learning-item">
-                                <div class="learning-header">
-                                    <span class="learning-name">Python & ML</span>
-                                    <span class="learning-percent">85%</span>
-                                </div>
-                                <div class="learning-bar">
-                                    <div class="learning-progress" style="width: 85%;"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="learning-item">
-                                <div class="learning-header">
-                                    <span class="learning-name">Web Development</span>
-                                    <span class="learning-percent">80%</span>
-                                </div>
-                                <div class="learning-bar">
-                                    <div class="learning-progress" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="learning-item">
-                                <div class="learning-header">
-                                    <span class="learning-name">Data Science</span>
-                                    <span class="learning-percent">75%</span>
-                                </div>
-                                <div class="learning-bar">
-                                    <div class="learning-progress" style="width: 75%;"></div>
-                                </div>
+
+                <div class="interests-card">
+                    <h4><i class="fas fa-fire"></i> Focus Areas</h4>
+                    <div class="interest-tags">
+                        <span class="tag" style="--t:#3b82f6">🤖 AI/ML</span>
+                        <span class="tag" style="--t:#8b5cf6">🧠 Deep Learning</span>
+                        <span class="tag" style="--t:#ec4899">💻 Full Stack</span>
+                        <span class="tag" style="--t:#10b981">📊 Data Science</span>
+                        <span class="tag" style="--t:#f59e0b">☁️ Cloud</span>
+                        <span class="tag" style="--t:#06b6d4">🐳 DevOps</span>
+                        <span class="tag" style="--t:#a855f7">🔗 LLM Eng.</span>
+                        <span class="tag" style="--t:#14b8a6">📡 MLOps</span>
+                    </div>
+
+                    <h4 style="margin-top:20px;"><i class="fas fa-history"></i> Journey</h4>
+                    <div class="about-timeline">
+                        <div class="timeline-entry">
+                            <div class="tl-dot" style="--td:#3b82f6"><i class="fas fa-robot"></i></div>
+                            <div class="tl-body">
+                                <span class="tl-year" style="--ty:#3b82f6">2026</span>
+                                <p class="tl-title">AI/ML Engineer (Aspiring)</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="interests-card">
-                        <h4>Interests</h4>
-                        <div class="interest-tags">
-                            <span class="tag">🤖 AI/ML</span>
-                            <span class="tag">🧠 Deep Learning</span>
-                            <span class="tag">💻 Full Stack</span>
-                            <span class="tag">📊 Data Science</span>
-                            <span class="tag">☁️ Cloud Computing</span>
-                            <span class="tag">🐳 DevOps</span>
+                        <div class="timeline-entry">
+                            <div class="tl-dot" style="--td:#10b981"><i class="fas fa-brain"></i></div>
+                            <div class="tl-body">
+                                <span class="tl-year" style="--ty:#10b981">2025</span>
+                                <p class="tl-title">Started ML Journey</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="tl-dot" style="--td:#8b5cf6"><i class="fas fa-code"></i></div>
+                            <div class="tl-body">
+                                <span class="tl-year" style="--ty:#8b5cf6">2024</span>
+                                <p class="tl-title">5+ Full Stack Projects</p>
+                            </div>
+                        </div>
+                        <div class="timeline-entry">
+                            <div class="tl-dot" style="--td:#f59e0b"><i class="fas fa-university"></i></div>
+                            <div class="tl-body">
+                                <span class="tl-year" style="--ty:#f59e0b">2023</span>
+                                <p class="tl-title">Enrolled at NJUPT</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -357,87 +482,313 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            
-            <div class="modal-skills-content">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-python"></i> Python</span>
-                        <span class="skill-percentage">95%</span>
+
+            <div class="modal-skills-content adv-skills-grid">
+
+                <!-- Python -->
+                <div class="adv-skill-card" data-percent="95" data-color="#3B82F6,#8B5CF6" data-index="0">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#3B82F6;">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Python</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">ML/AI</span>
+                                <span class="adv-tag">Backend</span>
+                                <span class="adv-tag">Scripting</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="95" style="--ring-color:#3B82F6;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="95">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-js"></i> JavaScript</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-code"></i> TypeScript</span>
-                        <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-java"></i> Java</span>
-                        <span class="skill-percentage">82%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 82%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-copyright"></i> C</span>
-                        <span class="skill-percentage">78%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 78%;"></div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#3B82F6;--bar-color2:#8B5CF6;width:0%;" data-width="95%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Expert · 5 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="skill-percentage">95%</span>
+
+                <!-- JavaScript -->
+                <div class="adv-skill-card" data-percent="90" data-color="#F59E0B,#EF4444" data-index="1">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#F59E0B;">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">JavaScript</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">ES2024+</span>
+                                <span class="adv-tag">Async</span>
+                                <span class="adv-tag">DOM</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="90" style="--ring-color:#F59E0B;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="90">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#F59E0B;--bar-color2:#EF4444;width:0%;" data-width="90%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Expert · 4 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="skill-percentage">92%</span>
+
+                <!-- TypeScript -->
+                <div class="adv-skill-card" data-percent="88" data-color="#60A5FA,#3B82F6" data-index="2">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#60A5FA;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">TypeScript</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">Types</span>
+                                <span class="adv-tag">OOP</span>
+                                <span class="adv-tag">Generics</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="88" style="--ring-color:#60A5FA;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="88">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#60A5FA;--bar-color2:#3B82F6;width:0%;" data-width="88%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-database"></i> SQL</span>
-                        <span class="skill-percentage">85%</span>
+
+                <!-- Java -->
+                <div class="adv-skill-card" data-percent="82" data-color="#F97316,#EF4444" data-index="3">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#F97316;">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Java</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">OOP</span>
+                                <span class="adv-tag">Spring</span>
+                                <span class="adv-tag">JVM</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="82" style="--ring-color:#F97316;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="82">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#F97316;--bar-color2:#EF4444;width:0%;" data-width="82%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
                     </div>
                 </div>
+
+                <!-- C -->
+                <div class="adv-skill-card" data-percent="78" data-color="#14B8A6,#06B6D4" data-index="4">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#14B8A6;">
+                            <i class="fas fa-copyright"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">C</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">Systems</span>
+                                <span class="adv-tag">Pointers</span>
+                                <span class="adv-tag">Low-level</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="78" style="--ring-color:#14B8A6;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="78">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#14B8A6;--bar-color2:#06B6D4;width:0%;" data-width="78%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Proficient · 2 yrs</div>
+                    </div>
+                </div>
+
+                <!-- HTML5 -->
+                <div class="adv-skill-card" data-percent="95" data-color="#E34F26,#F97316" data-index="5">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#E34F26;">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">HTML5</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">Semantic</span>
+                                <span class="adv-tag">A11y</span>
+                                <span class="adv-tag">SEO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="95" style="--ring-color:#E34F26;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="95">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#E34F26;--bar-color2:#F97316;width:0%;" data-width="95%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Expert · 5 yrs</div>
+                    </div>
+                </div>
+
+                <!-- CSS3 -->
+                <div class="adv-skill-card" data-percent="92" data-color="#1572B6,#60A5FA" data-index="6">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#1572B6;">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">CSS3</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">Animations</span>
+                                <span class="adv-tag">Grid</span>
+                                <span class="adv-tag">Flex</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="92" style="--ring-color:#1572B6;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="92">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#1572B6;--bar-color2:#60A5FA;width:0%;" data-width="92%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Expert · 5 yrs</div>
+                    </div>
+                </div>
+
+                <!-- SQL -->
+                <div class="adv-skill-card" data-percent="85" data-color="#10B981,#14B8A6" data-index="7">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#10B981;">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">SQL</span>
+                            <div class="adv-skill-tags">
+                                <span class="adv-tag">Queries</span>
+                                <span class="adv-tag">Joins</span>
+                                <span class="adv-tag">Indexing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80">
+                                <circle class="adv-ring-bg" cx="40" cy="40" r="32"/>
+                                <circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="85" style="--ring-color:#10B981;"/>
+                            </svg>
+                            <div class="adv-ring-label">
+                                <span class="adv-pct-num" data-target="85">0</span>
+                                <span class="adv-pct-sign">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track">
+                            <div class="adv-bar-segments"></div>
+                            <div class="adv-bar-fill" style="--bar-color1:#10B981;--bar-color2:#14B8A6;width:0%;" data-width="85%">
+                                <span class="adv-bar-tip"></span>
+                            </div>
+                        </div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -452,87 +803,179 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            
-            <div class="modal-skills-content">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-rocket"></i> Next.js 16</span>
-                        <span class="skill-percentage">92%</span>
+
+            <div class="modal-skills-content adv-skills-grid">
+
+                <!-- Next.js -->
+                <div class="adv-skill-card" data-index="0">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#E2E8F0;"><i class="fas fa-rocket"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Next.js 16</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">SSR</span><span class="adv-tag">App Router</span><span class="adv-tag">RSC</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="92" style="--ring-color:#E2E8F0;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="92">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#CBD5E1;--bar-color2:#94A3B8;width:0%;" data-width="92%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 3 yrs</div>
+                    </div>
+                </div>
+
+                <!-- React.js -->
+                <div class="adv-skill-card" data-index="1">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#61DAFB;"><i class="fab fa-react"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">React.js</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Hooks</span><span class="adv-tag">Context</span><span class="adv-tag">Redux</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="90" style="--ring-color:#61DAFB;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="90">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#61DAFB;--bar-color2:#0EA5E9;width:0%;" data-width="90%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 4 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Node.js -->
+                <div class="adv-skill-card" data-index="2">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#68A063;"><i class="fab fa-node-js"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Node.js</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Events</span><span class="adv-tag">Streams</span><span class="adv-tag">NPM</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="88" style="--ring-color:#68A063;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="88">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#68A063;--bar-color2:#22C55E;width:0%;" data-width="88%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Flask -->
+                <div class="adv-skill-card" data-index="3">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#94A3B8;"><i class="fas fa-flask"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Flask</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">REST API</span><span class="adv-tag">Jinja2</span><span class="adv-tag">WSGI</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="85" style="--ring-color:#94A3B8;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="85">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#94A3B8;--bar-color2:#64748B;width:0%;" data-width="85%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Tailwind CSS -->
+                <div class="adv-skill-card" data-index="4">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#38BDF8;"><i class="fas fa-wind"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Tailwind CSS</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Utility</span><span class="adv-tag">Responsive</span><span class="adv-tag">JIT</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="90" style="--ring-color:#38BDF8;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="90">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#38BDF8;--bar-color2:#0EA5E9;width:0%;" data-width="90%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 3 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Bootstrap -->
+                <div class="adv-skill-card" data-index="5">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#7C3AED;"><i class="fab fa-bootstrap"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Bootstrap</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Grid</span><span class="adv-tag">Components</span><span class="adv-tag">Sass</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="88" style="--ring-color:#7C3AED;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="88">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#7C3AED;--bar-color2:#8B5CF6;width:0%;" data-width="88%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 4 yrs</div>
+                    </div>
+                </div>
                     </div>
                 </div>
                 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-react"></i> React.js</span>
-                        <span class="skill-percentage">90%</span>
+                <!-- Express.js -->
+                <div class="adv-skill-card" data-index="6">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#CBD5E1;"><i class="fas fa-server"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Express.js</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Middleware</span><span class="adv-tag">REST</span><span class="adv-tag">MVC</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="82" style="--ring-color:#CBD5E1;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="82">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-node-js"></i> Node.js</span>
-                        <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-flask"></i> Flask</span>
-                        <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#CBD5E1;--bar-color2:#94A3B8;width:0%;" data-width="82%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-wind"></i> Tailwind CSS</span>
-                        <span class="skill-percentage">90%</span>
+
+                <!-- FastAPI -->
+                <div class="adv-skill-card" data-index="7">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#009688;"><i class="fas fa-fire"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">FastAPI</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Async</span><span class="adv-tag">OpenAPI</span><span class="adv-tag">Pydantic</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="80" style="--ring-color:#009688;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="80">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                        <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-server"></i> Express.js</span>
-                        <span class="skill-percentage">82%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 82%;"></div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#009688;--bar-color2:#14B8A6;width:0%;" data-width="80%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Proficient · 2 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-fire"></i> FastAPI</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -547,87 +990,177 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            
-            <div class="modal-skills-content">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-brain"></i> TensorFlow</span>
-                        <span class="skill-percentage">85%</span>
+
+            <div class="modal-skills-content adv-skills-grid">
+
+                <!-- TensorFlow -->
+                <div class="adv-skill-card" data-index="0">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#FF6F00;"><i class="fas fa-brain"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">TensorFlow</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Deep Learning</span><span class="adv-tag">CNN</span><span class="adv-tag">RNN</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="85" style="--ring-color:#FF6F00;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="85">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-fire-alt"></i> PyTorch</span>
-                        <span class="skill-percentage">82%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 82%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-robot"></i> Scikit-learn</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#FF6F00;--bar-color2:#F97316;width:0%;" data-width="85%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-table"></i> Pandas</span>
-                        <span class="skill-percentage">92%</span>
+
+                <!-- PyTorch -->
+                <div class="adv-skill-card" data-index="1">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#EE4C2C;"><i class="fas fa-fire-alt"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">PyTorch</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Autograd</span><span class="adv-tag">CUDA</span><span class="adv-tag">NLP</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="82" style="--ring-color:#EE4C2C;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="82">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-square-root-alt"></i> NumPy</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-layer-group"></i> Keras</span>
-                        <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#EE4C2C;--bar-color2:#EF4444;width:0%;" data-width="82%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 2 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-chart-line"></i> Matplotlib</span>
-                        <span class="skill-percentage">88%</span>
+
+                <!-- Scikit-learn -->
+                <div class="adv-skill-card" data-index="2">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#F89939;"><i class="fas fa-robot"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Scikit-learn</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">ML Pipeline</span><span class="adv-tag">SVM</span><span class="adv-tag">Ensemble</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="90" style="--ring-color:#F89939;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="90">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#F89939;--bar-color2:#F59E0B;width:0%;" data-width="90%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 4 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-chart-area"></i> Seaborn</span>
-                        <span class="skill-percentage">85%</span>
+
+                <!-- Pandas -->
+                <div class="adv-skill-card" data-index="3">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#6366F1;"><i class="fas fa-table"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Pandas</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">DataFrames</span><span class="adv-tag">ETL</span><span class="adv-tag">Analysis</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="92" style="--ring-color:#6366F1;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="92">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#6366F1;--bar-color2:#8B5CF6;width:0%;" data-width="92%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 4 yrs</div>
                     </div>
                 </div>
+
+                <!-- NumPy -->
+                <div class="adv-skill-card" data-index="4">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#4F9CF9;"><i class="fas fa-square-root-alt"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">NumPy</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Arrays</span><span class="adv-tag">Linear Alg</span><span class="adv-tag">Vectorize</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="90" style="--ring-color:#4F9CF9;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="90">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#4F9CF9;--bar-color2:#60A5FA;width:0%;" data-width="90%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 4 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Keras -->
+                <div class="adv-skill-card" data-index="5">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#D00000;"><i class="fas fa-layer-group"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Keras</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Sequential</span><span class="adv-tag">Functional</span><span class="adv-tag">Transfer</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="85" style="--ring-color:#D00000;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="85">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#D00000;--bar-color2:#EF4444;width:0%;" data-width="85%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Matplotlib -->
+                <div class="adv-skill-card" data-index="6">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#3B82F6;"><i class="fas fa-chart-line"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Matplotlib</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Plots</span><span class="adv-tag">Subplots</span><span class="adv-tag">3D</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="88" style="--ring-color:#3B82F6;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="88">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#3B82F6;--bar-color2:#60A5FA;width:0%;" data-width="88%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Seaborn -->
+                <div class="adv-skill-card" data-index="7">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#4C72B0;"><i class="fas fa-chart-area"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Seaborn</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Heatmaps</span><span class="adv-tag">Stats</span><span class="adv-tag">Palettes</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="85" style="--ring-color:#4C72B0;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="85">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#4C72B0;--bar-color2:#6366F1;width:0%;" data-width="85%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -642,87 +1175,177 @@
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            
-            <div class="modal-skills-content">
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-elephant"></i> PostgreSQL</span>
-                        <span class="skill-percentage">88%</span>
+
+            <div class="modal-skills-content adv-skills-grid">
+
+                <!-- PostgreSQL -->
+                <div class="adv-skill-card" data-index="0">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#336791;"><i class="fas fa-elephant"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">PostgreSQL</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">ACID</span><span class="adv-tag">Indexing</span><span class="adv-tag">JSONB</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="88" style="--ring-color:#336791;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="88">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-leaf"></i> MongoDB</span>
-                        <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-database"></i> Prisma ORM</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#336791;--bar-color2:#60A5FA;width:0%;" data-width="88%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-database"></i> MySQL</span>
-                        <span class="skill-percentage">82%</span>
+
+                <!-- MongoDB -->
+                <div class="adv-skill-card" data-index="1">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#47A248;"><i class="fas fa-leaf"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">MongoDB</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">NoSQL</span><span class="adv-tag">Aggregation</span><span class="adv-tag">Atlas</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 82%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="85" style="--ring-color:#47A248;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="85">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-cloud"></i> Vercel</span>
-                        <span class="skill-percentage">92%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%;"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fas fa-server"></i> Neon PostgreSQL</span>
-                        <span class="skill-percentage">88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%;"></div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#47A248;--bar-color2:#22C55E;width:0%;" data-width="85%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-docker"></i> Docker</span>
-                        <span class="skill-percentage">75%</span>
+
+                <!-- Prisma ORM -->
+                <div class="adv-skill-card" data-index="2">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#A78BFA;"><i class="fas fa-database"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Prisma ORM</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Schema</span><span class="adv-tag">Migrations</span><span class="adv-tag">Type-safe</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="90" style="--ring-color:#A78BFA;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="90">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#A78BFA;--bar-color2:#8B5CF6;width:0%;" data-width="90%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 3 yrs</div>
                     </div>
                 </div>
-                
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name"><i class="fab fa-git-alt"></i> Git & GitHub</span>
-                        <span class="skill-percentage">90%</span>
+
+                <!-- MySQL -->
+                <div class="adv-skill-card" data-index="3">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#4479A1;"><i class="fas fa-database"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">MySQL</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Relational</span><span class="adv-tag">Stored Procs</span><span class="adv-tag">InnoDB</span></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%;"></div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="82" style="--ring-color:#4479A1;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="82">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#4479A1;--bar-color2:#3B82F6;width:0%;" data-width="82%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 3 yrs</div>
                     </div>
                 </div>
+
+                <!-- Vercel -->
+                <div class="adv-skill-card" data-index="4">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#E2E8F0;"><i class="fas fa-cloud"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Vercel</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Deploy</span><span class="adv-tag">Edge</span><span class="adv-tag">CI/CD</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="92" style="--ring-color:#E2E8F0;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="92">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#E2E8F0;--bar-color2:#94A3B8;width:0%;" data-width="92%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 3 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Neon PostgreSQL -->
+                <div class="adv-skill-card" data-index="5">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#00E5FF;"><i class="fas fa-server"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Neon PostgreSQL</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Serverless</span><span class="adv-tag">Branching</span><span class="adv-tag">Scale</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="88" style="--ring-color:#00E5FF;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="88">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#00E5FF;--bar-color2:#06B6D4;width:0%;" data-width="88%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Advanced · 2 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Docker -->
+                <div class="adv-skill-card" data-index="6">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#2496ED;"><i class="fab fa-docker"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Docker</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Containers</span><span class="adv-tag">Compose</span><span class="adv-tag">Images</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="75" style="--ring-color:#2496ED;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="75">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#2496ED;--bar-color2:#60A5FA;width:0%;" data-width="75%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Proficient · 2 yrs</div>
+                    </div>
+                </div>
+
+                <!-- Git & GitHub -->
+                <div class="adv-skill-card" data-index="7">
+                    <div class="adv-skill-left">
+                        <div class="adv-skill-icon" style="--icon-color:#F05032;"><i class="fab fa-git-alt"></i></div>
+                        <div class="adv-skill-meta">
+                            <span class="adv-skill-name">Git & GitHub</span>
+                            <div class="adv-skill-tags"><span class="adv-tag">Branching</span><span class="adv-tag">PR Reviews</span><span class="adv-tag">Actions</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-skill-right">
+                        <div class="adv-radial-wrap">
+                            <svg class="adv-ring" viewBox="0 0 80 80"><circle class="adv-ring-bg" cx="40" cy="40" r="32"/><circle class="adv-ring-fill" cx="40" cy="40" r="32" data-pct="90" style="--ring-color:#F05032;"/></svg>
+                            <div class="adv-ring-label"><span class="adv-pct-num" data-target="90">0</span><span class="adv-pct-sign">%</span></div>
+                        </div>
+                    </div>
+                    <div class="adv-bar-row">
+                        <div class="adv-bar-track"><div class="adv-bar-segments"></div><div class="adv-bar-fill" style="--bar-color1:#F05032;--bar-color2:#EF4444;width:0%;" data-width="90%"><span class="adv-bar-tip"></span></div></div>
+                        <div class="adv-xp-badge">Expert · 5 yrs</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -736,103 +1359,122 @@
                 <p class="section-subtitle">Real-world applications I've built</p>
             </div>
             
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/sms.png" alt="Smart SMS">
-                        <div class="project-overlay">
-                            <a href="projects/project1.html" class="project-link">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag web">FULL STACK</span>
-                            <span class="project-tag">PRODUCTION</span>
-                        </div>
-                        <h3 class="project-title">Smart SMS</h3>
-                        <p class="project-description">
-                            Modern, production-ready Student Management System built with Next.js 16 and TypeScript. 
-                            Features role-based authentication, real-time attendance tracking, grade management, and interactive data visualization. 
-                            Deployed on Vercel with Neon PostgreSQL.
-                        </p>
-                        <div class="project-tech">
-                            <span><i class="fas fa-bolt"></i> Next.js 16</span>
-                            <span><i class="fab fa-js"></i> TypeScript</span>
-                            <span><i class="fas fa-database"></i> PostgreSQL</span>
-                        </div>
-                    </div>
+        </div><!-- /section-header container -->
+
+    <!-- ===== Full-width Coverflow Carousel ===== -->
+    <div class="pj-scene">
+        <button class="pj-nav pj-prev" id="pjPrev" aria-label="Previous project">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="pj-stage" id="pjStage">
+
+            <!-- Card 1 · Smart SMS -->
+            <div class="pj-card" data-index="0">
+                <div class="pj-badge" style="--dot:#3B82F6"><span class="pj-dot"></span>Full Stack</div>
+                <div class="pj-img"><img src="images/sms.png" alt="Smart SMS"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">Smart SMS</h3>
+                    <p class="pj-desc">Production-ready Student Management System with role-based auth, attendance tracking, grade management and live data visualization. Deployed on Vercel.</p>
+                    <div class="pj-tags"><span>Next.js 16</span><span>TypeScript</span><span>PostgreSQL</span></div>
                 </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/E-commerce.png" alt="E-Commerce Platform">
-                        <div class="project-overlay">
-                            <a href="projects/project2.html" class="project-link">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag web">FULL STACK</span>
-                            <span class="project-tag">REACT</span>
-                        </div>
-                        <h3 class="project-title">E-Commerce Platform</h3>
-                        <p class="project-description">
-                            Complete e-commerce application with React frontend, Node.js backend, 
-                            user authentication, and PostgreSQL database.
-                        </p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-react"></i> React</span>
-                            <span><i class="fab fa-node-js"></i> Node.js</span>
-                            <span><i class="fas fa-database"></i> PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/skymap-ai.png" alt="SkyMap AI">
-                        <div class="project-overlay">
-                            <a href="projects/project3.html" class="project-link">
-                                <i class="fas fa-eye"></i>
-                                <span>View Details</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag dl">AI WEATHER</span>
-                            <span class="project-tag">REACT</span>
-                        </div>
-                        <h3 class="project-title">SkyMap AI</h3>
-                        <p class="project-description">
-                            An AI-powered Weather Intelligence Platform built with React that combines real-time weather data from OpenWeather API with an intelligent decision-making engine to provide smart, actionable weather insights.
-                        </p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-react"></i> React</span>
-                            <span><i class="fas fa-brain"></i> AI Engine</span>
-                            <span><i class="fas fa-cloud-sun"></i> OpenWeather</span>
-                        </div>
-                    </div>
-                </div>
-                
+                <a href="projects/project1.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
-            
-            <div class="see-more-container">
-                <button class="see-more-btn" id="seeMoreProjectsBtn">
-                    <span>See More Projects</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+
+            <!-- Card 2 · E-Commerce -->
+            <div class="pj-card" data-index="1">
+                <div class="pj-badge" style="--dot:#F59E0B"><span class="pj-dot"></span>E-Commerce</div>
+                <div class="pj-img"><img src="images/E-commerce.png" alt="E-Commerce Platform"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">E-Commerce Platform</h3>
+                    <p class="pj-desc">Complete e-commerce app with React frontend, Node.js backend, user authentication, cart system and PostgreSQL database integration.</p>
+                    <div class="pj-tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+                </div>
+                <a href="projects/project2.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
-        </div>
+
+            <!-- Card 3 · SkyMap AI -->
+            <div class="pj-card" data-index="2">
+                <div class="pj-badge" style="--dot:#8B5CF6"><span class="pj-dot"></span>AI / Weather</div>
+                <div class="pj-img"><img src="images/skymap-ai.png" alt="SkyMap AI"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">SkyMap AI</h3>
+                    <p class="pj-desc">AI-powered Weather Intelligence Platform combining real-time OpenWeather data with an intelligent decision engine to deliver smart, actionable weather insights.</p>
+                    <div class="pj-tags"><span>AI</span><span>React</span><span>OpenWeather</span></div>
+                </div>
+                <a href="projects/project3.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 4 · Expense Tracker -->
+            <div class="pj-card" data-index="3">
+                <div class="pj-badge" style="--dot:#10B981"><span class="pj-dot"></span>Finance</div>
+                <div class="pj-img"><img src="images/expens.png" alt="Expense Tracker"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">Expense Tracker</h3>
+                    <p class="pj-desc">Modern expense tracking app for managing personal finances with transaction history, budget goals, and interactive visual analytics.</p>
+                    <div class="pj-tags"><span>React</span><span>Charts.js</span><span>Finance</span></div>
+                </div>
+                <a href="projects/project7.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 5 · Currency Converter -->
+            <div class="pj-card" data-index="4">
+                <div class="pj-badge" style="--dot:#F97316"><span class="pj-dot"></span>Java / App</div>
+                <div class="pj-img"><img src="images/currency-converter.png" alt="Currency Converter"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">Currency Converter</h3>
+                    <p class="pj-desc">Java desktop application with Swing GUI for live exchange rate fetching and instant multi-currency conversions via API integration.</p>
+                    <div class="pj-tags"><span>Java</span><span>Swing GUI</span><span>REST API</span></div>
+                </div>
+                <a href="projects/project10.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 6 · Phone Directory -->
+            <div class="pj-card" data-index="5">
+                <div class="pj-badge" style="--dot:#14B8A6"><span class="pj-dot"></span>Data Structures</div>
+                <div class="pj-img"><img src="images/phone-directory.png" alt="Phone Directory"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">Phone Directory</h3>
+                    <p class="pj-desc">Flask web app implementing a hash-table data structure for lightning-fast contact search, add and delete operations with O(1) lookup.</p>
+                    <div class="pj-tags"><span>Python</span><span>Flask</span><span>Hash Tables</span></div>
+                </div>
+                <a href="projects/project13.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 7 · RPS Game -->
+            <div class="pj-card" data-index="6">
+                <div class="pj-badge" style="--dot:#22C55E"><span class="pj-dot"></span>Game / Frontend</div>
+                <div class="pj-img"><img src="images/rps-game.png" alt="Rock Paper Scissors"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">RPS Game</h3>
+                    <p class="pj-desc">Animated Rock-Paper-Scissors game with score tracking, AI opponent logic, sound effects and smooth CSS transitions.</p>
+                    <div class="pj-tags"><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div>
+                </div>
+                <a href="projects/project11.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Card 8 · Digital Clock -->
+            <div class="pj-card" data-index="7">
+                <div class="pj-badge" style="--dot:#60A5FA"><span class="pj-dot"></span>Frontend</div>
+                <div class="pj-img"><img src="images/digital-clock.png" alt="Digital Clock"></div>
+                <div class="pj-body">
+                    <h3 class="pj-title">Digital Clock</h3>
+                    <p class="pj-desc">Sleek digital clock with real-time display, multiple time zone support, alarm functionality and a neon-themed dynamic UI.</p>
+                    <div class="pj-tags"><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div>
+                </div>
+                <a href="projects/project12.html" class="pj-cta">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div><!-- /pj-stage -->
+
+        <button class="pj-nav pj-next" id="pjNext" aria-label="Next project">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div><!-- /pj-scene -->
+
+    <div class="container">
+        <div class="pj-dots" id="pjDots"></div>
+    </div>
     </section>
 
     <!-- Projects Modal -->
@@ -1143,108 +1785,99 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
+        <div class="ct-bg-blob ct-blob-1"></div>
+        <div class="ct-bg-blob ct-blob-2"></div>
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">💬 Get In Touch</span>
                 <h2 class="section-title">Let's Create Something <span class="gradient-text">Amazing</span></h2>
                 <p class="section-subtitle">Have a project in mind or just want to connect? I'd love to hear from you!</p>
             </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-info-header">
-                        <h3>Contact Information</h3>
-                        <p class="contact-description">
-                            Feel free to reach out for opportunities, collaborations, or just to say hello!
-                        </p>
-                    </div>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method" data-aos="fade-right" data-aos-delay="100">
-                            <div class="method-icon gradient-icon">
-                                <i class="fas fa-envelope"></i>
+
+            <div class="ct-grid">
+
+                <!-- LEFT: Info Panel -->
+                <div class="ct-panel">
+
+                    <h3 class="ct-headline">Let's build<br>something <span class="ct-hl">great</span> together.</h3>
+                    <p class="ct-tagline">Open to full-time roles, freelance projects and collaborations in AI/ML and Full Stack development.</p>
+
+                    <div class="ct-methods">
+                        <a href="mailto:hridoy516578@gmail.com" class="ct-method" style="--mc:#4F8EF7">
+                            <div class="ct-method-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="ct-method-body">
+                                <span class="ct-method-label">Email Me</span>
+                                <span class="ct-method-val">hridoy516578@gmail.com</span>
                             </div>
-                            <div class="method-details">
-                                <span class="method-label">Email Address</span>
-                                <a href="mailto:hridoy516578@gmail.com" class="method-link">hridoy516578@gmail.com</a>
+                            <i class="fas fa-arrow-right ct-method-arrow"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/iamkamrul07" target="_blank" class="ct-method" style="--mc:#0A84FF">
+                            <div class="ct-method-icon"><i class="fab fa-linkedin"></i></div>
+                            <div class="ct-method-body">
+                                <span class="ct-method-label">LinkedIn</span>
+                                <span class="ct-method-val">@iamkamrul07</span>
                             </div>
-                        </div>
-                        
-                        <div class="contact-method" data-aos="fade-right" data-aos-delay="200">
-                            <div class="method-icon gradient-icon">
-                                <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-arrow-right ct-method-arrow"></i>
+                        </a>
+                        <a href="https://github.com/kamrul135" target="_blank" class="ct-method" style="--mc:#9D6FF5">
+                            <div class="ct-method-icon"><i class="fab fa-github"></i></div>
+                            <div class="ct-method-body">
+                                <span class="ct-method-label">GitHub</span>
+                                <span class="ct-method-val">@kamrul135</span>
                             </div>
-                            <div class="method-details">
-                                <span class="method-label">Location</span>
-                                <span class="method-value">Cumilla, Bangladesh</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method" data-aos="fade-right" data-aos-delay="300">
-                            <div class="method-icon gradient-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="method-details">
-                                <span class="method-label">LinkedIn Profile</span>
-                                <a href="https://linkedin.com/in/iamkamrul07" target="_blank" class="method-link">@iamkamrul07</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method" data-aos="fade-right" data-aos-delay="400">
-                            <div class="method-icon gradient-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="method-details">
-                                <span class="method-label">GitHub Profile</span>
-                                <a href="https://github.com/kamrul135" target="_blank" class="method-link">@kamrul135</a>
+                            <i class="fas fa-arrow-right ct-method-arrow"></i>
+                        </a>
+                        <div class="ct-method ct-method--loc" style="--mc:#0DD9C5">
+                            <div class="ct-method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="ct-method-body">
+                                <span class="ct-method-label">Location</span>
+                                <span class="ct-method-val">Cumilla, Bangladesh &nbsp;🇧🇩</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/kamrul135" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/iamkamrul07" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:hridoy516578@gmail.com" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
+
+                    <div class="ct-response">
+                        <i class="fas fa-clock"></i>
+                        <span>Avg. response time: <strong>within 24 hours</strong></span>
+                    </div>
+
+                    <div class="ct-socials">
+                        <a href="https://github.com/kamrul135" target="_blank" class="ct-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/iamkamrul07" target="_blank" class="ct-social" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:hridoy516578@gmail.com" class="ct-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="ct-social" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
+
+                <!-- RIGHT: Form -->
+                <div class="ct-form-wrap">
+                    <div class="ct-form-glow"></div>
+                    <form class="ct-form" id="contactForm">
+                        <div class="ct-form-row">
+                            <div class="ct-field">
+                                <input type="text" id="ct-name" name="name" required placeholder=" ">
+                                <label for="ct-name"><i class="fas fa-user"></i> Your Name</label>
+                            </div>
+                            <div class="ct-field">
+                                <input type="email" id="ct-email" name="email" required placeholder=" ">
+                                <label for="ct-email"><i class="fas fa-envelope"></i> Your Email</label>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="ct-field">
+                            <input type="text" id="ct-subject" name="subject" required placeholder=" ">
+                            <label for="ct-subject"><i class="fas fa-tag"></i> Subject</label>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
+                        <div class="ct-field">
+                            <textarea id="ct-message" name="message" rows="6" required placeholder=" "></textarea>
+                            <label for="ct-message"><i class="fas fa-comment-dots"></i> Your Message</label>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span>Send Message</span>
-                            <i class="fas fa-paper-plane"></i>
+                        <button type="submit" class="ct-submit">
+                            <span class="ct-submit-text">Send Message</span>
+                            <span class="ct-submit-icon"><i class="fas fa-paper-plane"></i></span>
                         </button>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1255,7 +1888,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Md Kamrul Hasan</h3>
-                    <p>Aspiring AI/ML Engineer • Full Stack Developer</p>
+                    <p>Aspiring AI/ML Engineer &bull; Full Stack Developer</p>
                 </div>
                 
                 <div class="footer-links">
@@ -1294,17 +1927,117 @@
     <script src="premium-script.js"></script>
     
     <script>
+        // ==================== PROJECT CAROUSEL ====================
+        (function () {
+            const stage    = document.getElementById('pjStage');
+            if (!stage) return;
+            const cards    = Array.from(stage.querySelectorAll('.pj-card'));
+            const total    = cards.length;
+            const dotsWrap = document.getElementById('pjDots');
+            let current    = 0;
+            let busy       = false;
+
+            // Position config: key = relative slot, value = layout values
+            const POS = {
+                '-2': { offset: -700, scale: 0.62, opacity: 0.22, z: 1  },
+                '-1': { offset: -370, scale: 0.82, opacity: 0.60, z: 3  },
+                 '0': { offset:    0, scale: 1.00, opacity: 1.00, z: 5  },
+                 '1': { offset:  370, scale: 0.82, opacity: 0.60, z: 3  },
+                 '2': { offset:  700, scale: 0.62, opacity: 0.22, z: 1  },
+            };
+
+            // Build dot indicators
+            cards.forEach(function (_, i) {
+                const d = document.createElement('button');
+                d.className = 'pj-dot-btn' + (i === 0 ? ' is-active' : '');
+                d.setAttribute('aria-label', 'Go to project ' + (i + 1));
+                d.addEventListener('click', function () { goTo(i); });
+                dotsWrap.appendChild(d);
+            });
+
+            function applyPositions() {
+                const dots = dotsWrap.querySelectorAll('.pj-dot-btn');
+                cards.forEach(function (card, i) {
+                    let rel = ((i - current) % total + total) % total;
+                    if (rel > Math.floor(total / 2)) rel -= total;
+
+                    card.classList.toggle('is-active', rel === 0);
+                    const cfg = POS[String(rel)];
+                    if (cfg) {
+                        card.style.transform  = 'translateX(calc(-50% + ' + cfg.offset + 'px)) translateY(-50%) scale(' + cfg.scale + ')';
+                        card.style.opacity    = cfg.opacity;
+                        card.style.zIndex     = cfg.z;
+                        card.style.visibility = 'visible';
+                    } else {
+                        card.style.opacity    = '0';
+                        card.style.zIndex     = '0';
+                        card.style.visibility = 'hidden';
+                    }
+                });
+                dots.forEach(function (d, i) {
+                    d.classList.toggle('is-active', i === current);
+                });
+            }
+
+            function goTo(index) {
+                if (busy) return;
+                busy    = true;
+                current = ((index % total) + total) % total;
+                applyPositions();
+                setTimeout(function () { busy = false; }, 650);
+            }
+
+            document.getElementById('pjPrev').addEventListener('click', function () { goTo(current - 1); });
+            document.getElementById('pjNext').addEventListener('click', function () { goTo(current + 1); });
+
+            // Click a non-active card to focus it
+            cards.forEach(function (card, i) {
+                card.addEventListener('click', function () {
+                    if (!card.classList.contains('is-active')) goTo(i);
+                });
+            });
+
+            // Keyboard navigation (only when no modal is open)
+            document.addEventListener('keydown', function (e) {
+                const tag = document.activeElement.tagName;
+                if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+                if (document.querySelector('.skill-modal.active, .projects-modal.active')) return;
+                if (e.key === 'ArrowLeft')  goTo(current - 1);
+                if (e.key === 'ArrowRight') goTo(current + 1);
+            });
+
+            // Touch / swipe
+            let touchStartX = 0;
+            stage.addEventListener('touchstart', function (e) {
+                touchStartX = e.touches[0].clientX;
+            }, { passive: true });
+            stage.addEventListener('touchend', function (e) {
+                const diff = touchStartX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+            });
+
+            // Initial render
+            applyPositions();
+
+            // Auto-advance every 3 seconds; pause on hover/touch
+            let autoTimer = setInterval(function () { goTo(current + 1); }, 3000);
+
+            function resetTimer() {
+                clearInterval(autoTimer);
+                autoTimer = setInterval(function () { goTo(current + 1); }, 3000);
+            }
+
+            stage.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+            stage.addEventListener('mouseleave', function () { resetTimer(); });
+            stage.addEventListener('touchend',   function () { resetTimer(); }, { passive: true });
+            document.getElementById('pjPrev').addEventListener('click', function () { resetTimer(); });
+            document.getElementById('pjNext').addEventListener('click', function () { resetTimer(); });
+        })();
+
         // Projects Modal functionality
         const projectsModal = document.getElementById('projectsModal');
-        const seeMoreBtn = document.getElementById('seeMoreProjectsBtn');
         const closeModalBtn = document.getElementById('closeModalBtn');
         const modalBackdrop = document.querySelector('.modal-backdrop');
-
-        // Open modal
-        seeMoreBtn.addEventListener('click', () => {
-            projectsModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
 
         // Close modal
         function closeModal() {
@@ -1339,15 +2072,75 @@
             if (modal) {
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
+
+                // Trigger advanced animations for any modal with adv-skill-cards
+                if (modal.querySelector('.adv-skill-card')) {
+                    setTimeout(() => runAdvSkillAnimations(modal), 80);
+                }
             }
         }
-        
-        // Close skill modal
+
+        // ── Advanced skill modal animations ──────────────────────────
+        function runAdvSkillAnimations(modal) {
+            const CIRCUMFERENCE = 201.06; // 2π × r(32)
+
+            modal.querySelectorAll('.adv-skill-card').forEach((card, i) => {
+                const delay = i * 70;
+
+                // 1. Circular ring fill
+                const ringFill = card.querySelector('.adv-ring-fill');
+                if (ringFill) {
+                    const pct = parseFloat(ringFill.dataset.pct) / 100;
+                    setTimeout(() => {
+                        ringFill.style.strokeDashoffset = CIRCUMFERENCE * (1 - pct);
+                    }, delay + 100);
+                }
+
+                // 2. Animated percentage counter
+                const numEl = card.querySelector('.adv-pct-num');
+                if (numEl) {
+                    const target = parseInt(numEl.dataset.target, 10);
+                    let current = 0;
+                    const step = target / 40;
+                    const interval = Math.max(18, 800 / 40);
+                    setTimeout(() => {
+                        const timer = setInterval(() => {
+                            current = Math.min(current + step, target);
+                            numEl.textContent = Math.floor(current);
+                            if (current >= target) clearInterval(timer);
+                        }, interval);
+                    }, delay + 100);
+                }
+
+                // 3. Bar fill
+                const barFill = card.querySelector('.adv-bar-fill');
+                if (barFill) {
+                    setTimeout(() => {
+                        barFill.style.width = barFill.dataset.width;
+                    }, delay + 200);
+                }
+            });
+        }
+
+        // Reset animations when modal closes (so re-opening re-animates)
         function closeSkillModal(modalId) {
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.classList.remove('active');
                 document.body.style.overflow = '';
+
+                // Reset adv cards for next open (works for all modals)
+                if (modal.querySelector('.adv-skill-card')) {
+                    const CIRCUMFERENCE = 201.06;
+                    modal.querySelectorAll('.adv-skill-card').forEach(card => {
+                        const ringFill = card.querySelector('.adv-ring-fill');
+                        if (ringFill) ringFill.style.strokeDashoffset = CIRCUMFERENCE;
+                        const numEl = card.querySelector('.adv-pct-num');
+                        if (numEl) numEl.textContent = '0';
+                        const barFill = card.querySelector('.adv-bar-fill');
+                        if (barFill) barFill.style.width = '0%';
+                    });
+                }
             }
         }
         
@@ -1356,8 +2149,7 @@
             backdrop.addEventListener('click', (e) => {
                 const modal = e.target.closest('.skill-modal');
                 if (modal) {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = '';
+                    closeSkillModal(modal.id);
                 }
             });
         });
@@ -1366,8 +2158,7 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 document.querySelectorAll('.skill-modal.active').forEach(modal => {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = '';
+                    closeSkillModal(modal.id);
                 });
             }
         });
