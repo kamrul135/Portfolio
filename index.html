@@ -220,23 +220,6 @@
             </div>
 
             <div class="about-hero">
-                <!-- Avatar -->
-                <div class="about-avatar-wrap">
-                    <div class="about-avatar-ring"></div>
-                    <div class="about-avatar-ring ring2"></div>
-                    <div class="about-avatar"><i class="fas fa-user-astronaut"></i></div>
-                    <div class="about-avatar-badge">
-                        <i class="fas fa-circle"></i>
-                        <span>Available for Work</span>
-                    </div>
-                    <div class="about-orbit">
-                        <span class="orbit-dot" style="--i:0;"><i class="fab fa-python"></i></span>
-                        <span class="orbit-dot" style="--i:1;"><i class="fab fa-react"></i></span>
-                        <span class="orbit-dot" style="--i:2;"><i class="fas fa-brain"></i></span>
-                        <span class="orbit-dot" style="--i:3;"><i class="fas fa-database"></i></span>
-                    </div>
-                </div>
-
                 <!-- Intro -->
                 <div class="about-intro">
                     <h3 class="about-name">Md <span class="name-highlight">Kamrul</span> Hasan</h3>
@@ -246,9 +229,12 @@
                         <span class="role-prefix">/&gt;</span>
                     </p>
                     <p class="about-bio">
-                        CSE student at <strong>NJUPT</strong> obsessed with building intelligent systems — 
+                        CSE student at <strong>Nanjing University of Posts and Telecommunications (NJUPT)</strong> obsessed with building intelligent systems — 
                         from neural networks to full-stack web apps. I bridge cutting-edge AI research 
-                        with real-world impact.
+                        with real-world impact by turning ideas into production-ready solutions. 
+                        My work spans machine learning model development, data-driven problem solving, 
+                        backend APIs, and responsive frontend experiences, with a strong focus on 
+                        clean architecture, performance, and user-centered design.
                     </p>
 
                     <!-- Info row -->
@@ -931,9 +917,7 @@
                         <div class="adv-xp-badge">Advanced · 4 yrs</div>
                     </div>
                 </div>
-                    </div>
-                </div>
-                
+
                 <!-- Express.js -->
                 <div class="adv-skill-card" data-index="6">
                     <div class="adv-skill-left">
@@ -1799,9 +1783,6 @@
                 <!-- LEFT: Info Panel -->
                 <div class="ct-panel">
 
-                    <h3 class="ct-headline">Let's build<br>something <span class="ct-hl">great</span> together.</h3>
-                    <p class="ct-tagline">Open to full-time roles, freelance projects and collaborations in AI/ML and Full Stack development.</p>
-
                     <div class="ct-methods">
                         <a href="mailto:hridoy516578@gmail.com" class="ct-method" style="--mc:#4F8EF7">
                             <div class="ct-method-icon"><i class="fas fa-envelope"></i></div>
@@ -2143,6 +2124,44 @@
                 }
             }
         }
+
+        // 3D transform tilt effect for advanced skill cards
+        function initAdvancedCardTransforms() {
+            const allowTilt = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!allowTilt || reduceMotion) return;
+
+            document.querySelectorAll('.adv-skill-card').forEach(card => {
+                if (card.dataset.tiltInit === '1') return;
+                card.dataset.tiltInit = '1';
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const px = x / rect.width;
+                    const py = y / rect.height;
+
+                    const rotateY = (px - 0.5) * 12;
+                    const rotateX = (0.5 - py) * 10;
+
+                    card.style.setProperty('--tilt-x', `${rotateX.toFixed(2)}deg`);
+                    card.style.setProperty('--tilt-y', `${rotateY.toFixed(2)}deg`);
+                    card.style.setProperty('--mx', `${(px * 100).toFixed(1)}%`);
+                    card.style.setProperty('--my', `${(py * 100).toFixed(1)}%`);
+                    card.classList.add('is-tilting');
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.setProperty('--tilt-x', '0deg');
+                    card.style.setProperty('--tilt-y', '0deg');
+                    card.style.setProperty('--mx', '20%');
+                    card.style.setProperty('--my', '20%');
+                    card.classList.remove('is-tilting');
+                });
+            });
+        }
         
         // Close on backdrop click
         document.querySelectorAll('.skill-modal .modal-backdrop').forEach(backdrop => {
@@ -2162,6 +2181,9 @@
                 });
             }
         });
+
+        // Initialize transform effect once DOM is ready
+        initAdvancedCardTransforms();
     </script>
 </body>
 </html>

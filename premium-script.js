@@ -455,6 +455,15 @@ scrollAnimatedElements.forEach(el => {
     scrollObserver.observe(el);
 });
 
+// Slide transform effect on scroll down
+const slideScrollElements = document.querySelectorAll('.about-hero, .about-bottom, .overview-card, .project-card, .ct-panel, .ct-form-wrap');
+slideScrollElements.forEach((el, index) => {
+    if (el.classList.contains('scroll-slide-down')) return;
+    el.classList.add('scroll-slide-down');
+    el.style.transitionDelay = `${Math.min(index * 70, 420)}ms`;
+    scrollObserver.observe(el);
+});
+
 // Staggered animation for lists
 const skillItems = document.querySelectorAll('.skill-item');
 skillItems.forEach((item, index) => {
